@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleveland Code Enforcement Leads</title>
+<style>
+  :root { --bg:#f7f7f5; --fg:#1d1d1b; --mute:#6b6b66; --card:#fff; --line:#e2e2dc; --hot:#b3261e; --warm:#b26a00; --ok:#3d6b2f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#161615; --fg:#ecece8; --mute:#9a9a93; --card:#1f1f1d; --line:#33332f; --hot:#ff8a80; --warm:#ffb74d; --ok:#9ccc65; }
+  }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.45 system-ui,sans-serif; }
+  header { padding:16px; }
+  h1 { margin:0 0 4px; font-size:20px; }
+  .meta { color:var(--mute); }
+  .bar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:0 16px 12px; }
+  .bar input[type=search], .bar select { padding:6px 8px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--fg); }
+  .wrap { overflow-x:auto; padding:0 16px 24px; }
+  table { border-collapse:collapse; width:100%; min-width:900px; background:var(--card); }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { cursor:pointer; user-select:none; position:sticky; top:0; background:var(--card); }
+  .score { font-weight:700; }
+  .hot { color:var(--hot); } .warm { color:var(--warm); } .ok { color:var(--ok); }
+  .tag { display:inline-block; padding:1px 6px; margin:1px 2px 1px 0; border:1px solid var(--line); border-radius:10px; font-size:12px; }
+  small { color:var(--mute); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cleveland code enforcement leads</h1>
+  <div class="meta" id="meta">Loading…</div>
+</header>
+<div class="bar">
+  <input type="search" id="q" placeholder="Search address, owner, parcel…" size="32">
+  <label>Min score <select id="min"><option>0</option><option>30</option><option>50</option><option selected>60</option><option>80</option></select></label>
+  <label><input type="checkbox" id="owner"> has owner</label>
+  <label><input type="checkbox" id="oos"> out-of-state owner</label>
+  <label><input type="checkbox" id="fc"> also in foreclosure</label>
+  <span class="meta" id="count"></span>
+</div>
+<div class="wrap">
+  <table>
+    <thead><tr id="head"></tr></thead>
+    <tbody id="body"></tbody>
+  </table>
+</div>
+<script>
+const COLS = [
+  ["score","Score"], ["property_address","Property"], ["owner_name","Owner"], ["mailing_address","Mailing address"],
+  ["lead_types","Signals"], ["open_records","Records"], ["oldest_open_days","Days open"], ["total_fines","Fines"], ["added_date","Added"]
+];
+let rows = [], sortKey = "score", sortDir = -1;
+
+function td(text, cls) { const c = document.createElement("td"); c.textContent = text ?? ""; if (cls) c.className = cls; return c; }
+
+function render() {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const min = +document.getElementById("min").value;
+  const needOwner = document.getElementById("owner").checked;
+  const oos = document.getElementById("oos").checked;
+  const fc = document.getElementById("fc").checked;
+  const shown = rows.filter(r =>
+    r.score >= min && (!needOwner || r.owner_name) && (!oos || r.out_of_state_owner) && (!fc || r.in_foreclosure) &&
+    (!q || [r.property_address, r.owner_name, r.parcel, r.mailing_address].join(" ").toLowerCase().includes(q))
+  ).sort((a, b) => {
+    const x = a[sortKey], y = b[sortKey];
+    const cmp = (typeof x === "number" && typeof y === "number") ? x - y : String(x ?? "").localeCompare(String(y ?? ""));
+    return cmp * sortDir;
+  });
+  document.getElementById("count").textContent = `${shown.length} of ${rows.length} leads`;
+  const body = document.getElementById("body");
+  body.replaceChildren(...shown.map(r => {
+    const tr = document.createElement("tr");
+    tr.title = (r.score_reasons || []).join("\n");
+    tr.append(td(r.score, "score " + (r.score >= 70 ? "hot" : r.score >= 50 ? "warm" : "ok")));
+    const p = document.createElement("td");
+    p.append(document.createTextNode(r.property_address));
+    const sm = document.createElement("small"); sm.textContent = ` ${r.parcel || ""} ${r.neighborhood || ""}`;
+    p.append(document.createElement("br"), sm);
+    tr.append(p, td(r.owner_name || "—"), td(r.mailing_address || ""));
+    const sig = document.createElement("td");
+    (r.lead_types || []).forEach(t => { const s = document.createElement("span"); s.className = "tag"; s.textContent = t; sig.append(s); });
+    if (r.in_foreclosure) { const s = document.createElement("span"); s.className = "tag"; s.textContent = "Foreclosure"; sig.append(s); }
+    tr.append(sig, td(r.open_records), td(r.oldest_open_days), td(r.total_fines ? "$" + r.total_fines.toLocaleString() : ""), td(r.added_date));
+    return tr;
+  }));
+}
+
+const head = document.getElementById("head");
+COLS.forEach(([k, label]) => {
+  const th = document.createElement("th"); th.textContent = label;
+  th.onclick = () => { sortDir = (sortKey === k) ? -sortDir : -1; sortKey = k; render(); };
+  head.append(th);
+});
+["q", "min", "owner", "oos", "fc"].forEach(id => document.getElementById(id).addEventListener("input", render));
+
+fetch("cleveland_code_enforcement.json").then(r => r.json()).then(d => {
+  rows = d.leads || [];
+  document.getElementById("meta").textContent = `Updated ${d.meta.updated_utc || "?"} UTC · ${rows.length} open leads · hover a row for the score breakdown`;
+  render();
+}).catch(e => { document.getElementById("meta").textContent = "Could not load data: " + e; });
+</script>
+</body>
+</html>

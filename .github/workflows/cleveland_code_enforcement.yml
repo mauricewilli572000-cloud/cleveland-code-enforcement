@@ -1,0 +1,57 @@
+name: Cleveland code enforcement leads
+
+on:
+  schedule:
+    - cron: "30 9 * * *"        # nightly ~5:30 AM Eastern; city data refreshes Sundays 7 AM
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Look-back days (blank = automatic)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cleveland-code-enforcement
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest -q tests
+
+      - name: Run pipeline
+        env:
+          INPUT_DAYS: ${{ github.event.inputs.days }}
+        run: |
+          ARGS=""
+          if [ -n "$INPUT_DAYS" ]; then
+            ARGS="--days $INPUT_DAYS"
+          elif [ "$(date -u +%u)" = "7" ]; then
+            ARGS="--days 60"      # Sunday: full 60-day re-check after the weekly data refresh
+          fi
+          if [ -f data/foreclosure_addresses.csv ]; then
+            ARGS="$ARGS --foreclosure-csv data/foreclosure_addresses.csv"
+          fi
+          python run_pipeline.py $ARGS
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/records.json data/ghl_cleveland_code_enforcement.csv docs/cleveland_code_enforcement.json
+          git diff --cached --quiet || git commit -m "Cleveland code enforcement: nightly update"
+          git push

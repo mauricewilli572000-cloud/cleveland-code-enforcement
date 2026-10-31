@@ -1,0 +1,8 @@
+{
+ "3fbae9a4d11f4af0be19912109c0cbff_0": "https://services3.arcgis.com/dty2kHktVXHrqO8i/arcgis/rest/services/Complaint_Violation_Notices/FeatureServer/0",
+ "bd47abc2adc242f789313af4191610ae_0": "https://services3.arcgis.com/dty2kHktVXHrqO8i/arcgis/rest/services/Current_Condemnations/FeatureServer/0",
+ "aec7cde2885f4b56ad23a5166e4380c6_0": "https://services3.arcgis.com/dty2kHktVXHrqO8i/arcgis/rest/services/Civil_Tickets/FeatureServer/0",
+ "ba57c55fc6b54f34994420b67e831cc8_0": "https://services3.arcgis.com/dty2kHktVXHrqO8i/arcgis/rest/services/Boardup_Permits/FeatureServer/0",
+ "ffaaa1651d5540419469375d680f3245_1": "https://gis.cuyahogacounty.gov/server/rest/services/CCFO/Parcel_Fabric_Taxparcels/FeatureServer/1",
+ "44bd466d14ce4d90bc0671c524bf16c2_0": "https://services3.arcgis.com/dty2kHktVXHrqO8i/arcgis/rest/services/Parcel_Analytics_(PUBLIC_DRAFT_)/FeatureServer/0"
+}
