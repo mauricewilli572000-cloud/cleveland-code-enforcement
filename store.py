@@ -1,6 +1,7 @@
 """Accumulate leads across runs and export the GHL CSV + dashboard feed."""
 import csv
 import json
+import re
 from datetime import date, datetime, timezone
 
 import config
@@ -12,6 +13,7 @@ GHL_COLUMNS = [
     "Parcel", "Lead Source", "Lead Type", "Score", "Open Records", "Total Fines",
     "Oldest Open Days", "In Foreclosure", "Out Of State Owner", "Case Numbers",
     "Violations", "Score Reasons", "Date Added", "Tags",
+    "Owner Full Name",            # appended last so existing GHL column mappings don't shift
 ]
 
 
@@ -56,13 +58,20 @@ def save(state: dict):
 SUFFIXES = {"JR", "JR.", "SR", "SR.", "II", "III", "IV"}
 
 
+_CO_OWNER_SPLIT = re.compile(r"\s+(?:&|AND)\s+", re.I)
+_ET_AL = re.compile(r"\s+ET\s*(?:AL|UX|VIR)\b\.?", re.I)
+
+
 def _split_name(owner: str) -> tuple[str, str, str]:
     """(first, last, company). County names are 'LAST, FIRST M', 'LAST FIRST M',
-    or 'FIRST LAST,JR' (comma before a suffix)."""
+    or 'FIRST LAST,JR' (comma before a suffix). With co-owners ('A & B', 'ET AL')
+    only the first named owner is split out; the full string goes in Owner Full Name."""
     if not owner:
         return "", "", ""
     if is_entity(owner):
         return "", "", owner
+    owner = _ET_AL.sub("", owner).strip()
+    owner = _CO_OWNER_SPLIT.split(owner, maxsplit=1)[0].strip(" ,")
     if "," in owner:
         head, tail = [x.strip() for x in owner.split(",", 1)]
         if tail.upper() in SUFFIXES:                      # "ROBERT MURRAY,JR."
@@ -110,6 +119,7 @@ def export_ghl(state: dict, min_score: int = 0):
                 "Yes" if l["in_foreclosure"] else "", "Yes" if l["out_of_state_owner"] else "",
                 "; ".join(l["case_numbers"]), "; ".join(l["violation_types"]),
                 "; ".join(l["score_reasons"]), l["added_date"], tags(l),
+                l["owner_name"],
             ])
 
 

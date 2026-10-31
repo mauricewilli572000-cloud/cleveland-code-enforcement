@@ -122,6 +122,11 @@ def test_unit_detected_after_city_is_stripped():
     ("MILEV, MILEN K.", "Milen K.", "Milev"),
     ("RUSSELL ALFONSO T", "Alfonso T", "Russell"),
     ("ROBERT MURRAY,JR.", "Robert", "Murray Jr."),
+    ("MORRIS, KATHERINE A & JURINA, DONOVAN", "Katherine A", "Morris"),
+    ("SMITH JOHN & JANE", "John", "Smith"),
+    ("JONES MARY AND JONES TOM", "Mary", "Jones"),
+    ("LEWIS JEANETT ET AL", "Jeanett", "Lewis"),
+    ("ROBERT MURRAY,JR. & MARY MURRAY", "Robert", "Murray Jr."),
 ])
 def test_owner_name_split(owner, first, last):
     import store
@@ -253,6 +258,8 @@ def test_exports(env):
     assert len(rows) == 2 and rows[0]["Lead Source"] == "Cleveland Code Enforcement"
     assert rows[0]["First Name"] == "John A" and rows[0]["Last Name"] == "Smith"
     assert rows[1]["Company Name"] == "WESTSIDE HOLDINGS LLC"
+    assert rows[0]["Owner Full Name"] == "SMITH JOHN A"
+    assert list(rows[0].keys())[-1] == "Owner Full Name"      # appended last: existing GHL mappings unchanged
     dash = json.loads(config.DASHBOARD_JSON.read_text())
     assert dash["meta"]["lead_count"] == 2
 
