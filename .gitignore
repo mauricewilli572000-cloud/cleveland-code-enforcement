@@ -1,3 +1,6 @@
 __pycache__/
 .pytest_cache/
 data/debug/
+discovery.zip
+discover_output.txt
+debug.zip
