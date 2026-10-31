@@ -37,7 +37,7 @@ jobs:
         env:
           INPUT_DAYS: ${{ github.event.inputs.days }}
         run: |
-          ARGS=""
+          ARGS="--min-score 40"     # CSV only; the dashboard keeps every lead
           if [ -n "$INPUT_DAYS" ]; then
             ARGS="--days $INPUT_DAYS"
           elif [ "$(date -u +%u)" = "7" ]; then

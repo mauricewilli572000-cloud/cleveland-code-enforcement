@@ -2,7 +2,7 @@
 from datetime import date
 
 import config
-from normalize import is_entity, property_key
+from normalize import is_entity, owner_class, property_key
 
 
 def _days_old(iso: str | None, today: date) -> int | None:
@@ -87,6 +87,7 @@ def build_leads(signals: list[dict], lookup, today: date, foreclosure_keys: set[
             "parcel": parcel,
             "owner_name": owner["owner_name"] if owner else "",
             "owner_is_entity": bool(owner and is_entity(owner["owner_name"])),
+            "owner_class": owner_class(owner["owner_name"]) if owner else "",
             "mailing_address": mailing,
             "out_of_state_owner": bool(owner and out_state),
             "lead_types": [config.SOURCES[s]["label"] for s in sources],

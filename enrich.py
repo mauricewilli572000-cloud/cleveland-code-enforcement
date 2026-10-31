@@ -10,7 +10,7 @@ from pathlib import Path
 
 import config
 import fields
-from normalize import address_key, clean_address, norm_parcel
+from normalize import address_key, clean_address, norm_parcel, split_address
 
 log = logging.getLogger("enrich")
 
@@ -55,7 +55,7 @@ class OwnerLookup:
             if pk and pk not in self.by_parcel:
                 self.by_parcel[pk] = rec
             site = fields.pick(attrs, "parcel_site", source, idx)
-            ak = address_key(site) if site else ""
+            ak = address_key(split_address(site)[0]) if site else ""
             if ak and ak not in self.by_addr:
                 self.by_addr[ak] = rec
 

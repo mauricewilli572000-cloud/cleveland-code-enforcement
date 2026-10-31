@@ -25,7 +25,7 @@ def make_fixtures(d: Path):
     d.mkdir(parents=True, exist_ok=True)
     vn = [
         # kept: open, recent, has parcel
-        {"DW_RecordID": "VN-1", "DW_Address": "1234 E 105 ST", "DW_Parcel": "12345678",
+        {"DW_RecordID": "VN-1", "DW_Address": "1234 E 105TH ST, CLEVELAND, OH, 44108", "DW_Parcel": "12345678",
          "DW_Opened_Date": ms("2026-09-20"), "DW_Status": "Open", "DW_Record_Type": "Exterior Violation",
          "DW_Description": "Call owner at 216-555-0101 or bob@example.com about the roof", "DW_Zip": "44108"},
         # dropped: closed -> and closes lead P:99999999 if present
@@ -46,6 +46,9 @@ def make_fixtures(d: Path):
          "DW_Date": ms("2026-03-01"), "DW_Record_Type": "Condemnation"},
         {"DW_RecordID": "CD-2", "DW_Address": "3300 W 25 ST", "DW_Parcel": "33333333",
          "DW_Date": ms("2026-08-01")},
+        # city/land-bank owned -> dropped unless --include-public
+        {"DW_RecordID": "CD-3", "DW_Address": "13710 EARLWOOD RD, CLEVELAND, OH, 44110",
+         "DW_Parcel": "44444444", "DW_Date": ms("2026-02-01")},
     ]
     tickets = [
         {"DW_RecordID": "CT-1", "DW_Address": "3300 W 25 ST", "DW_Parcel": "33333333",
@@ -57,6 +60,9 @@ def make_fixtures(d: Path):
          "tax_city": "PHOENIX", "tax_state": "AZ", "tax_zip": "85001", "par_addr": "1234 E 105 ST"},
         {"parcel_id": "33333333", "deeded_owner": "WESTSIDE HOLDINGS LLC", "tax_address": "1 PUBLIC SQ",
          "tax_city": "CLEVELAND", "tax_state": "OH", "tax_zip": "44113", "par_addr": "3300 W 25 ST"},
+        {"parcel_id": "44444444", "deeded_owner": "CITY OF CLEVELAND LAND REUTILIZATION PROGRAM",
+         "tax_address": "601 LAKESIDE AVE", "tax_city": "CLEVELAND", "tax_state": "OH", "tax_zip": "44114",
+         "par_addr": "13710 EARLWOOD RD, CLEVELAND, OH, 44110"},
     ]
     for name, rows in [("violation_notices", vn), ("condemnations", cond), ("civil_tickets", tickets),
                        ("board_ups", boards), ("parcels", parcels)]:
@@ -100,6 +106,35 @@ def test_address_key_matches_variants():
     assert normalize.address_key("1234 E. 105th Street") == normalize.address_key("1234 E 105 ST")
 
 
+def test_split_address_strips_city_state_zip():
+    assert normalize.split_address("1130 E 113TH ST, CLEVELAND, OH, 44108") == ("1130 E 113TH ST", "44108")
+    assert normalize.split_address("123 main st, apt 4, cleveland, oh, 44102") == ("123 MAIN ST, APT 4", "44102")
+    assert normalize.split_address("3300 W 25 ST") == ("3300 W 25 ST", "")
+
+
+def test_unit_detected_after_city_is_stripped():
+    street, _ = normalize.split_address("4400 LORAIN AVE 2, CLEVELAND, OH, 44102")
+    assert normalize.has_unit(street)
+
+
+@pytest.mark.parametrize("owner,first,last", [
+    ("COOK, BRITTANY", "Brittany", "Cook"),
+    ("MILEV, MILEN K.", "Milen K.", "Milev"),
+    ("RUSSELL ALFONSO T", "Alfonso T", "Russell"),
+    ("ROBERT MURRAY,JR.", "Robert", "Murray Jr."),
+])
+def test_owner_name_split(owner, first, last):
+    import store
+    assert store._split_name(owner)[:2] == (first, last)
+
+
+def test_owner_class():
+    assert normalize.owner_class("CITY OF CLEVELAND LAND REUTILIZATION PROGRAM") == "government"
+    assert normalize.owner_class("CUYAHOGA COUNTY LAND REUTILIZATION CORP") == "government"
+    assert normalize.owner_class("TMDW PROPERTIES LLC") == "entity"
+    assert normalize.owner_class("COOK, BRITTANY") == "individual"
+
+
 def test_redact():
     out = normalize.redact("call 216-555-0101 or bob@example.com")
     assert "555" not in out and "@" not in out
@@ -114,6 +149,7 @@ def test_pipeline_filters_groups_and_enriches(env):
     a = L["P:12345678"]
     assert a["open_records"] == 2 and len(a["lead_types"]) == 2          # VN + condemnation grouped
     assert a["owner_name"] == "SMITH JOHN A"
+    assert a["property_address"] == "1234 E 105TH ST" and a["zip"] == "44108"    # city/state/zip stripped
     assert a["out_of_state_owner"] is True
     assert "216" not in a["description"] and "@" not in a["description"]
     assert a["score"] >= 80
@@ -138,6 +174,15 @@ def test_exports(env):
 def test_include_flags(env):
     run(env, "--include-units", "--include-closed")
     assert {"P:11111111", "P:99999999"} <= set(leads())
+
+
+def test_public_owned_dropped_by_default_and_kept_with_flag(env):
+    run(env)
+    assert "P:44444444" not in leads()
+    run(env, "--include-public")
+    assert leads()["P:44444444"]["owner_class"] == "government"
+    run(env)                                           # default run removes it again
+    assert "P:44444444" not in leads()
 
 
 def test_closed_case_removes_existing_lead(env):

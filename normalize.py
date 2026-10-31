@@ -37,6 +37,37 @@ def clean_address(addr) -> str:
     return re.sub(r"\s+", " ", str(addr or "")).strip().upper()
 
 
+# The city datasets give "1130 E 113TH ST, CLEVELAND, OH, 44108"; we want street + zip separately.
+CSZ_RE = re.compile(r"^(?P<street>.*?),\s*[A-Z .'\-]+,\s*(?:OH|OHIO)\b[,\s]*(?P<zip>\d{5})?(?:-\d{4})?\s*$")
+
+
+def split_address(addr) -> tuple[str, str]:
+    """(street, zip). Strips a trailing ', CITY, OH, ZIP' if present."""
+    a = clean_address(addr)
+    m = CSZ_RE.match(a)
+    if m:
+        return m.group("street").strip(" ,"), m.group("zip") or ""
+    return a, ""
+
+
+GOVERNMENT_WORDS = (
+    "CITY OF ", "COUNTY OF ", "STATE OF ", "CUYAHOGA COUNTY", "LAND REUTILIZATION", "LAND BANK",
+    "UNITED STATES", "METROPOLITAN HOUSING", "CMHA", "BOARD OF EDUCATION", "MUNICIPAL SCHOOL",
+    "CMSD", "PORT AUTHORITY", "DEPARTMENT OF", "SECRETARY OF HOUSING", "HUD ", "NEORSD",
+    "SEWER DISTRICT", "PUBLIC LIBRARY", "CLEVELAND METROPOLITAN",
+)
+
+
+def owner_class(name: str) -> str:
+    """'government' (city/county/land bank/housing authority), 'entity', or 'individual'."""
+    n = f" {str(name or '').upper()} "
+    if not n.strip():
+        return ""
+    if any(w in n for w in GOVERNMENT_WORDS):
+        return "government"
+    return "entity" if is_entity(name) else "individual"
+
+
 def has_unit(addr: str) -> bool:
     a = clean_address(addr)
     return bool(UNIT_RE.search(a) or TRAILING_UNIT_RE.search(a))
@@ -89,7 +120,7 @@ def to_signal(source_key: str, attrs: dict) -> dict | None:
     def get(role):
         return fields.pick(attrs, role, source_key, idx)
 
-    address = clean_address(get("address"))
+    address, addr_zip = split_address(get("address"))
     parcel = norm_parcel(get("parcel"))
     if not address and not parcel:
         return None
@@ -105,7 +136,7 @@ def to_signal(source_key: str, attrs: dict) -> dict | None:
         "case_number": str(get("case_number") or "").strip(),
         "address": address,
         "parcel": parcel,
-        "zip": str(get("zip") or "").strip()[:5],
+        "zip": (str(get("zip") or "").strip()[:5] or addr_zip),
         "date": epoch_ms_to_iso(get("date")),
         "status": str(status or "").strip(),
         "closed": is_closed(status, src["all_active"]),

@@ -121,6 +121,8 @@ def main(argv=None) -> int:
     ap.add_argument("--include-units", action="store_true", help="keep apartments / unit addresses")
     ap.add_argument("--parcel-csv", type=Path, help="local parcel/owner CSV to use for owners")
     ap.add_argument("--foreclosure-csv", type=Path, help="CSV of foreclosure parcels/addresses for cross-match")
+    ap.add_argument("--include-public", action="store_true",
+                    help="keep properties owned by the City, County, land bank or housing authority")
     ap.add_argument("--no-enrich", action="store_true", help="skip owner lookup")
     ap.add_argument("--min-score", type=int, default=0, help="minimum score for the GHL CSV")
     ap.add_argument("--offline", type=Path, help="read <source>.json fixtures instead of the network")
@@ -176,6 +178,12 @@ def main(argv=None) -> int:
         log.info("owner records loaded: %d", len(lookup))
 
     leads = scoring.build_leads(signals, lookup, today, load_foreclosure_keys(args.foreclosure_csv))
+    if not args.include_public:
+        gov = {l["lead_id"] for l in leads if l["owner_class"] == "government"}
+        if gov:
+            log.info("dropping %d city/county/land-bank-owned properties (--include-public keeps them)", len(gov))
+        leads = [l for l in leads if l["lead_id"] not in gov]
+        closed_keys = closed_keys | gov            # also removes them if stored earlier
     removed = len(closed_keys & set(state.get("leads", {})))
     state = store.merge(state, leads, closed_keys, today)
     store.save(state)

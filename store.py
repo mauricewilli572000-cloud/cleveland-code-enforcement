@@ -53,14 +53,28 @@ def save(state: dict):
     config.RECORDS_JSON.write_text(json.dumps(state, indent=1))
 
 
+SUFFIXES = {"JR", "JR.", "SR", "SR.", "II", "III", "IV"}
+
+
 def _split_name(owner: str) -> tuple[str, str, str]:
+    """(first, last, company). County names are 'LAST, FIRST M', 'LAST FIRST M',
+    or 'FIRST LAST,JR' (comma before a suffix)."""
     if not owner:
         return "", "", ""
     if is_entity(owner):
         return "", "", owner
-    parts = owner.replace(",", " ").split()
-    # county rolls are normally "LAST FIRST [MI]"
-    return (" ".join(parts[1:]).title(), parts[0].title(), "") if len(parts) > 1 else ("", owner.title(), "")
+    if "," in owner:
+        head, tail = [x.strip() for x in owner.split(",", 1)]
+        if tail.upper() in SUFFIXES:                      # "ROBERT MURRAY,JR."
+            parts = head.split()
+            if len(parts) >= 2:
+                return parts[0].title(), f"{' '.join(parts[1:])} {tail}".title(), ""
+            return "", f"{head} {tail}".title(), ""
+        return tail.title(), head.title(), ""             # "COOK, BRITTANY"
+    parts = owner.split()
+    if len(parts) > 1:
+        return " ".join(parts[1:]).title(), parts[0].title(), ""
+    return "", owner.title(), ""
 
 
 def tags(lead: dict) -> str:
