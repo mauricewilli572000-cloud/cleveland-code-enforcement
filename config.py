@@ -81,4 +81,17 @@ CLOSED_STATUS_WORDS = (
     "closed", "complete", "completed", "resolved", "withdrawn", "void", "voided",
     "dismissed", "paid", "cancel", "compliance", "abated", "satisfied", "rescinded",
     "demolished", "no violation", "unfounded",
+    "payment received", "appeal granted",        # civil tickets: paid / overturned
 )
+
+# ---- Scoring knobs (set any to 0 to switch it off) ----------------------------
+# Escalated enforcement stages seen in the real status values (violation notices):
+#   court: 'Court Stat', 'Filed w/Clerk of Courts', 'Court Date Set', 'Court Judgment',
+#          'Summons Approved', 'Prosecution Pkt Created', 'Paralegal to Law', 'Packet to Paralegal...'
+#   demolition: 'Demo Packet to Legal', 'Demo File to Chief', 'Demolition Approved', 'Approved for Demo'
+STAGE_BONUSES = [
+    ("demolition track", ("demo",), 15),
+    ("court / legal stage", ("court", "summons", "prosecution", "paralegal", "legal", "judgment"), 10),
+]
+INDIVIDUAL_OWNER_BONUS = 10        # a person, not a company: easier to reach and negotiate with
+INSTITUTIONAL_OWNER_PENALTY = -15  # REO / bank / securitization trusts / large rental funds

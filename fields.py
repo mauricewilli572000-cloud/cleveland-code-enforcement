@@ -20,14 +20,15 @@ def norm(name: str) -> str:
 
 CANDIDATES = {
     "case_number": [
+        "v_permit_id", "ticket_id", "permit_id",          # confirmed real names (Oct 2026)
         "dw_recordid", "recordid", "record_id", "recordnumber", "record_number", "case_number",
         "casenumber", "vn_number", "violation_notice_number", "complaint_number", "cmp_number",
-        "ticket_number", "permit_number", "boardup_number", "altid", "alt_id",
+        "ticket_number", "permit_number", "permit_id", "boardup_number", "altid", "alt_id",
     ],
     "address": [
         "dw_address", "dw_full_address", "dw_site_address", "full_address", "fulladdress",
-        "address", "site_address", "property_address", "street_address", "situs_address",
-        "location_address", "addr",
+        "address", "primary_address", "primary_address", "site_address", "property_address", "street_address",
+        "situs_address", "location_address", "addr",
     ],
     "parcel": [
         "dw_parcel", "dw_parcel_number", "dw_parcel_id", "parcel_number", "parcelnumber",
@@ -45,11 +46,13 @@ CANDIDATES = {
         "violation_status", "case_status", "ticket_status",
     ],
     "type": [
+        "type_of_violation", "violation_citations", "ticket_citations",
         "dw_record_type", "record_type", "dw_type", "type", "violation_type", "category",
         "dw_category", "complaint_type", "dw_subtype", "subtype", "record_subtype",
         "dw_violation", "violation", "ticket_type",
     ],
     "description": [
+        "additional_citation_details",
         "dw_description", "description", "violation_description", "short_notes",
         "notes", "comments", "dw_comments", "detail", "details", "ordinance_description",
     ],
@@ -64,7 +67,9 @@ CANDIDATES = {
         "deeded_owner", "deededowner", "parcel_owner", "owner", "owner_name", "own_name",
         "owner1", "par_owner", "ownername", "taxpayer_name", "tax_name", "owner_1",
     ],
+    "mail_unit": ["mail_unit_no", "mail_unit", "mail_apt"],
     "mail_street": [
+        "mail_addr_street",                                 # confirmed real name (county + Property Insights)
         "tax_address", "tax_mailing_address", "mailing_address", "mail_address",
         "mail_addr", "mail_street", "mailaddress", "mailing_street", "taxpayer_address",
         "owner_address", "own_addr", "tax_add_1", "tax_addr",

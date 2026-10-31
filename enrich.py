@@ -29,6 +29,9 @@ def _mailing(attrs: dict, source: str, idx: dict) -> str:
         return clean_address(full)
     parts = [fields.pick(attrs, r, source, idx) for r in ("mail_street", "mail_city", "mail_state", "mail_zip")]
     street, city, state, zipc = [str(p).strip() if p else "" for p in parts]
+    unit = fields.pick(attrs, "mail_unit", source, idx)
+    if unit and street:
+        street = f"{street} {str(unit).strip()}"
     tail = " ".join(x for x in (state, zipc) if x)
     return clean_address(", ".join(x for x in (street, city, tail) if x))
 

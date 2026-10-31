@@ -56,6 +56,13 @@ def build_leads(signals: list[dict], lookup, today: date, foreclosure_keys: set[
             score += 10
             reasons.append("open > 90 days (+10)")
 
+        stage_text = " ".join(s.get("status", "").lower() for s in sigs)
+        for label, words, pts in config.STAGE_BONUSES:
+            if pts and any(w in stage_text for w in words):
+                score += pts
+                reasons.append(f"{label} (+{pts})")
+                break                                  # only the highest-priority stage counts
+
         total_amount = sum(s["amount"] for s in sigs if s.get("amount"))
         if total_amount > 0:
             score += 10
@@ -70,6 +77,13 @@ def build_leads(signals: list[dict], lookup, today: date, foreclosure_keys: set[
             elif out_city:
                 score += 8
                 reasons.append("owner mails outside Cleveland (+8)")
+            cls = owner_class(owner["owner_name"])
+            if cls == "individual" and config.INDIVIDUAL_OWNER_BONUS:
+                score += config.INDIVIDUAL_OWNER_BONUS
+                reasons.append(f"individual owner (+{config.INDIVIDUAL_OWNER_BONUS})")
+            elif cls == "institutional" and config.INSTITUTIONAL_OWNER_PENALTY:
+                score += config.INSTITUTIONAL_OWNER_PENALTY
+                reasons.append(f"institutional/REO owner ({config.INSTITUTIONAL_OWNER_PENALTY})")
         else:
             reasons.append("owner not found")
 
@@ -105,7 +119,7 @@ def build_leads(signals: list[dict], lookup, today: date, foreclosure_keys: set[
             "ward": next((s["ward"] for s in sigs if s["ward"]), ""),
             "neighborhood": next((s["neighborhood"] for s in sigs if s["neighborhood"]), ""),
             "in_foreclosure": fc,
-            "score": min(100, score),
+            "score": max(0, min(100, score)),
             "score_reasons": reasons,
         })
     leads.sort(key=lambda l: (-l["score"], l["property_address"]))

@@ -58,13 +58,22 @@ GOVERNMENT_WORDS = (
 )
 
 
+INSTITUTIONAL_RE = re.compile(
+    r"\b(REO|BORROWER|SECURITIZATION|FANNIE MAE|FREDDIE MAC|FEDERAL NATIONAL|FEDERAL HOME LOAN|"
+    r"BANK|MORTGAGE|HOME LOAN|TRUSTEE FOR|ASSET (?:BACKED|HOLDINGS|MANAGEMENT)|REAL ESTATE OWNED|"
+    r"OPENDOOR|INVITATION HOMES|AMERICAN HOMES 4 RENT|PROGRESS RESIDENTIAL|RENTAL (?:FUND|HOLDINGS))\b"
+)
+
+
 def owner_class(name: str) -> str:
-    """'government' (city/county/land bank/housing authority), 'entity', or 'individual'."""
+    """'government', 'institutional' (REO/bank/securitization), 'entity', or 'individual'."""
     n = f" {str(name or '').upper()} "
     if not n.strip():
         return ""
     if any(w in n for w in GOVERNMENT_WORDS):
         return "government"
+    if INSTITUTIONAL_RE.search(n):
+        return "institutional"
     return "entity" if is_entity(name) else "individual"
 
 
@@ -140,7 +149,7 @@ def to_signal(source_key: str, attrs: dict) -> dict | None:
         "date": epoch_ms_to_iso(get("date")),
         "status": str(status or "").strip(),
         "closed": is_closed(status, src["all_active"]),
-        "type": str(get("type") or "").strip(),
+        "type": re.sub(r"\s+", " ", str(get("type") or "")).strip()[:120],
         "description": redact(get("description"))[:300],
         "amount": amount,
         "ward": str(get("ward") or "").strip(),

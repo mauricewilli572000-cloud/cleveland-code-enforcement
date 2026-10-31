@@ -135,6 +135,92 @@ def test_owner_class():
     assert normalize.owner_class("COOK, BRITTANY") == "individual"
 
 
+def test_institutional_owner_class():
+    assert normalize.owner_class("TRYON STREET AQQUISITION TRUST I REO HOLDINGS, LLC") == "institutional"
+    assert normalize.owner_class("HERO HOMES JV 2 ENCORE BORROWER, LLC") == "institutional"
+    assert normalize.owner_class("HERO HOMES LLC") == "entity"          # 'HERO' must not match REO
+    assert normalize.owner_class("TMDW PROPERTIES LLC") == "entity"
+
+
+@pytest.mark.parametrize("status,closed", [
+    ("Payment Received", True), ("Appeal Granted", True), ("Closed Payment Received", True),
+    ("Sent to DAL", False), ("Court Stat", False), ("Post&Photo (NC)", False), ("Awaiting Payment - Late", False),
+])
+def test_real_status_wording(status, closed):
+    assert normalize.is_closed(status, False) is closed
+
+
+def test_stage_and_owner_type_scoring(env):
+    import scoring
+    from datetime import date
+    base = {"source": "violation_notices", "case_number": "X", "address": "1 TEST ST", "parcel": "5",
+            "zip": "", "date": "2026-10-01", "type": "", "description": "", "amount": None,
+            "ward": "", "neighborhood": "", "closed": False}
+
+    class L:
+        def __init__(self, name):
+            self.n = name
+
+        def lookup(self, p, a):
+            return {"owner_name": self.n, "mailing_address": "1 TEST ST, CLEVELAND, OH 44101"}
+
+    def score(status, owner):
+        return scoring.build_leads([{**base, "status": status}], L(owner), date(2026, 10, 30))[0]["score"]
+
+    plain = score("Open", "DOE JANE")
+    assert score("VN Mailed by Clerk", "DOE JANE") == plain             # just a mailing, not a court stage
+    assert score("Filed w/Clerk of Courts", "DOE JANE") == plain + 10
+    assert score("Court Stat", "DOE JANE") == plain + 10
+    assert score("Demo Packet to Legal", "DOE JANE") == plain + 15          # demolition outranks court
+    assert score("Open", "DOE JANE") == score("Open", "TMDW PROPERTIES LLC") + 10
+    assert score("Open", "TMDW PROPERTIES LLC") - score("Open", "X BORROWER LLC") == 15
+
+
+REAL_FIELDS = {   # field names confirmed from the live services (discovery output, Oct 2026)
+    "violation_notices": ["OBJECTID", "V_PERMIT_ID", "FILE_DATE", "RECORD_STATUS", "ISSUE_DATE", "ACTIVE_VIOLATION",
+                          "ADDRESS", "PARCEL_NUMBER", "TYPE_OF_VIOLATION", "VIOLATION_CITATIONS",
+                          "ADDITIONAL_CITATION_DETAILS", "DW_Parcel", "DW_Neighborhood"],
+    "civil_tickets": ["OBJECTID", "TICKET_ID", "FILE_DATE", "TICKET_STATUS", "ISSUE_DATE", "ADDRESS",
+                      "PARCEL_NUMBER", "TICKET_CITATIONS", "ADDITIONAL_CITATION_DETAILS", "DW_Parcel"],
+    "board_ups": ["OBJECTID", "PERMIT_ID", "PERMIT_TYPE", "PRIMARY_ADDRESS", "PARCEL_NUMBER", "FILE_DATE",
+                  "ISSUE_DATE", "DW_Parcel"],
+    "condemnations": ["OBJECTID", "Parcel_Number", "Active_Condemnation", "Address", "Condemnation_Date", "DW_Parcel"],
+}
+EXPECTED = {
+    "violation_notices": {"case_number": "V_PERMIT_ID", "address": "ADDRESS", "status": "RECORD_STATUS",
+                          "date": "ISSUE_DATE", "type": "TYPE_OF_VIOLATION", "parcel": "DW_Parcel"},
+    "civil_tickets": {"case_number": "TICKET_ID", "status": "TICKET_STATUS", "type": "TICKET_CITATIONS"},
+    "board_ups": {"case_number": "PERMIT_ID", "address": "PRIMARY_ADDRESS", "date": "ISSUE_DATE"},
+    "condemnations": {"address": "Address", "date": "Condemnation_Date", "parcel": "DW_Parcel"},
+}
+
+
+@pytest.mark.parametrize("source", list(EXPECTED))
+def test_real_schema_roles_detected(source):
+    import fields
+    for role, field in EXPECTED[source].items():
+        assert fields.detect_field(REAL_FIELDS[source], role, source) == field, (source, role)
+
+
+def test_real_county_mailing_fields_build_a_full_street_address():
+    import enrich
+    row = {"parcel_id": "12345678", "parcel_owner": "SMITH JOHN A", "mail_addr_street": "10 MAIN ST",
+           "mail_unit_no": "APT 2", "mail_city": "PHOENIX", "mail_state": "AZ", "mail_zip": "85001",
+           "par_addr_all": "1234 E 105TH ST, CLEVELAND, OH, 44108"}
+    lk = enrich.OwnerLookup()
+    lk.add_rows([row])
+    got = lk.lookup("12345678", "")
+    assert got["mailing_address"] == "10 MAIN ST APT 2, PHOENIX, AZ 85001"
+    assert lk.lookup("", "1234 E 105 ST")["owner_name"] == "SMITH JOHN A"     # address fallback via par_addr_all
+
+
+def test_payment_received_ticket_is_closed():
+    assert normalize.is_closed("Payment Received", False)
+    assert normalize.is_closed("Closed Payment Received", False)
+    assert not normalize.is_closed("Awaiting Payment - Late", False)
+    assert not normalize.is_closed("Sent to DAL", False)
+
+
 def test_redact():
     out = normalize.redact("call 216-555-0101 or bob@example.com")
     assert "555" not in out and "@" not in out
