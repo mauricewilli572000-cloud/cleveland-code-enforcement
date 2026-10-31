@@ -70,8 +70,15 @@ class OwnerLookup:
         return self.by_addr.get(ak) if ak else None
 
     # -- live service ----------------------------------------------------------
-    def load_from_service(self, client, parcels: set[str], addresses: set[str]):
-        """Query parcel layers only for the parcels/addresses we actually need."""
+    MAX_ADDRESS_LOOKUPS = 300   # address fallback is slow; parcel match is the main path
+
+    def load_from_service(self, client, pairs: list[tuple[str, str]]):
+        """Query parcel layers only for the parcels we need; fall back to address
+        only for properties that still have no owner after the parcel match.
+
+        pairs: (parcel, address) for every open signal.
+        """
+        parcels = {norm_parcel(p) for p, _ in pairs if p}
         for ps in config.PARCEL_SOURCES:
             try:
                 url = client.resolve_layer_url(ps["item_id"], ps["layer"])
@@ -92,7 +99,14 @@ class OwnerLookup:
                     except Exception as exc:
                         log.warning("parcel query failed (%s): %s", ps["name"], exc)
                         break
-            unresolved = [a for a in addresses if address_key(a) not in self.by_addr]
+            unresolved = sorted({
+                a for p, a in pairs
+                if a and not self.lookup(p, a)          # no owner by parcel OR address yet
+            })
+            if len(unresolved) > self.MAX_ADDRESS_LOOKUPS:
+                log.warning("%d properties still have no owner after parcel match; address-matching only the first %d",
+                            len(unresolved), self.MAX_ADDRESS_LOOKUPS)
+                unresolved = unresolved[:self.MAX_ADDRESS_LOOKUPS]
             if site_field and unresolved:
                 for i in range(0, len(unresolved), 100):
                     chunk = unresolved[i:i + 100]

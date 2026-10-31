@@ -172,14 +172,11 @@ def main(argv=None) -> int:
             if pf.exists():
                 lookup.add_rows(json.loads(pf.read_text()))
         elif client:
-            lookup.load_from_service(
-                client,
-                {s["parcel"] for s in signals if s["parcel"]},
-                {s["address"] for s in signals if s["address"]},
-            )
+            lookup.load_from_service(client, [(s["parcel"], s["address"]) for s in signals])
         log.info("owner records loaded: %d", len(lookup))
 
     leads = scoring.build_leads(signals, lookup, today, load_foreclosure_keys(args.foreclosure_csv))
+    removed = len(closed_keys & set(state.get("leads", {})))
     state = store.merge(state, leads, closed_keys, today)
     store.save(state)
     store.export_ghl(state, args.min_score)
@@ -187,7 +184,7 @@ def main(argv=None) -> int:
 
     with_owner = sum(1 for l in state["leads"].values() if l["owner_name"])
     log.info("done: %d leads in store (%d with owner), %d new/updated this run, %d closed removed",
-             len(state["leads"]), with_owner, len(leads), len(closed_keys))
+             len(state["leads"]), with_owner, len(leads), removed)
     if failures:
         log.warning("sources that failed this run: %s", failures)
     return 0
