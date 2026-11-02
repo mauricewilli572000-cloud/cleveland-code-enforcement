@@ -291,6 +291,29 @@ def test_closed_case_removes_existing_lead(env):
     assert "P:12345678" in leads()
 
 
+def test_foreclosure_json_feed_matches_by_hyphenated_parcel_and_by_address(env, tmp_path):
+    feed = tmp_path / "cuyahoga.json"
+    feed.write_text(json.dumps({"leads": [
+        {"parcel_number": "123-45-678", "property_address": "9999  OTHER  ST"},      # parcel match only
+        {"parcel_number": "", "property_address": "3300  W 25TH ST"},                  # address match only
+        {"parcel_number": "555-55-555", "property_address": "1 NOWHERE RD"},           # no match
+    ]}))
+    run(env, "--foreclosure-source", str(feed))
+    L = leads()
+    assert L["P:12345678"]["in_foreclosure"] and L["P:33333333"]["in_foreclosure"]
+    assert any("foreclosure" in r for r in L["P:12345678"]["score_reasons"])
+    base = json.loads(json.dumps(L["P:33333333"]))
+    run(env)                                                                          # without the feed: no bonus
+    assert not leads()["P:33333333"]["in_foreclosure"]
+    assert leads()["P:33333333"]["score"] == base["score"] - 25
+
+
+def test_unreadable_foreclosure_source_is_skipped_not_fatal(env, tmp_path):
+    assert run(env, "--foreclosure-source", str(tmp_path / "missing.json"),
+               "--foreclosure-source", "https://invalid.invalid/x.json") == 0
+    assert not leads()["P:12345678"]["in_foreclosure"]
+
+
 def test_added_date_is_preserved(env):
     run(env)
     first = leads()["P:12345678"]["added_date"]

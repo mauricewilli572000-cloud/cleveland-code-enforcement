@@ -1,6 +1,6 @@
 {
  "meta": {
-  "updated_utc": "2026-11-01T21:44:46+00:00",
+  "updated_utc": "2026-11-02T01:43:39+00:00",
   "lead_count": 6149
  },
  "leads": {
@@ -1769,15 +1769,16 @@
    "total_fines": 0,
    "ward": "10",
    "neighborhood": "Collinwood-Nottingham",
-   "in_foreclosure": false,
-   "score": 85,
+   "in_foreclosure": true,
+   "score": 100,
    "score_reasons": [
     "Active Condemnation",
     "Building Complaint Violation Notice",
     "2 open records (+5)",
     "multiple enforcement types (+10)",
     "open > 180 days (+15)",
-    "owner mails out of state (+15)"
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -3086,8 +3087,8 @@
    "total_fines": 0,
    "ward": "9",
    "neighborhood": "Collinwood-Nottingham",
-   "in_foreclosure": false,
-   "score": 83,
+   "in_foreclosure": true,
+   "score": 100,
    "score_reasons": [
     "Board-Up (open/vacant/vandalized)",
     "Civil Ticket (Residents First)",
@@ -3095,7 +3096,8 @@
     "3 open records (+10)",
     "multiple enforcement types (+10)",
     "open > 180 days (+15)",
-    "owner mails outside Cleveland (+8)"
+    "owner mails outside Cleveland (+8)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -10205,14 +10207,15 @@
    "total_fines": 0,
    "ward": "14",
    "neighborhood": "Stockyards",
-   "in_foreclosure": false,
-   "score": 80,
+   "in_foreclosure": true,
+   "score": 100,
    "score_reasons": [
     "Active Condemnation",
     "Building Complaint Violation Notice",
     "4 open records (+15)",
     "multiple enforcement types (+10)",
-    "owner mails out of state (+15)"
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -12426,15 +12429,16 @@
    "total_fines": 0,
    "ward": "8",
    "neighborhood": "Hough",
-   "in_foreclosure": false,
-   "score": 73,
+   "in_foreclosure": true,
+   "score": 98,
    "score_reasons": [
     "Active Condemnation",
     "Building Complaint Violation Notice",
     "2 open records (+5)",
     "multiple enforcement types (+10)",
     "owner mails outside Cleveland (+8)",
-    "individual owner (+10)"
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -15309,13 +15313,14 @@
    "total_fines": 0,
    "ward": "2",
    "neighborhood": "Broadway-Slavic Village",
-   "in_foreclosure": false,
-   "score": 73,
+   "in_foreclosure": true,
+   "score": 98,
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
     "owner mails outside Cleveland (+8)",
-    "individual owner (+10)"
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -24095,14 +24100,15 @@
    "total_fines": 0,
    "ward": "3",
    "neighborhood": "Broadway-Slavic Village",
-   "in_foreclosure": false,
-   "score": 70,
+   "in_foreclosure": true,
+   "score": 95,
    "score_reasons": [
     "Civil Ticket (Residents First)",
     "Active Condemnation",
     "2 open records (+5)",
     "multiple enforcement types (+10)",
-    "open > 180 days (+15)"
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -29930,12 +29936,13 @@
    "total_fines": 0,
    "ward": "6",
    "neighborhood": "Glenville",
-   "in_foreclosure": false,
-   "score": 65,
+   "in_foreclosure": true,
+   "score": 90,
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
-    "individual owner (+10)"
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -33276,12 +33283,13 @@
    "total_fines": 0,
    "ward": "10",
    "neighborhood": "North Shore Collinwood",
-   "in_foreclosure": false,
-   "score": 65,
+   "in_foreclosure": true,
+   "score": 90,
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
-    "individual owner (+10)"
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -35991,12 +35999,13 @@
    "total_fines": 0,
    "ward": "12",
    "neighborhood": "Cudell",
-   "in_foreclosure": false,
-   "score": 65,
+   "in_foreclosure": true,
+   "score": 90,
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
-    "individual owner (+10)"
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -43754,12 +43763,13 @@
    "total_fines": 0,
    "ward": "3",
    "neighborhood": "Broadway-Slavic Village",
-   "in_foreclosure": false,
-   "score": 65,
+   "in_foreclosure": true,
+   "score": 90,
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
-    "individual owner (+10)"
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -44844,14 +44854,15 @@
    "total_fines": 0,
    "ward": "8",
    "neighborhood": "Hough",
-   "in_foreclosure": false,
-   "score": 65,
+   "in_foreclosure": true,
+   "score": 90,
    "score_reasons": [
     "Active Condemnation",
     "Building Complaint Violation Notice",
     "2 open records (+5)",
     "multiple enforcement types (+10)",
-    "individual owner (+10)"
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -47015,12 +47026,13 @@
    "total_fines": 0,
    "ward": "6",
    "neighborhood": "Buckeye-Woodhill",
-   "in_foreclosure": false,
-   "score": 63,
+   "in_foreclosure": true,
+   "score": 88,
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
-    "owner mails outside Cleveland (+8)"
+    "owner mails outside Cleveland (+8)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -51552,12 +51564,13 @@
    "total_fines": 0,
    "ward": "3",
    "neighborhood": "Broadway-Slavic Village",
-   "in_foreclosure": false,
-   "score": 63,
+   "in_foreclosure": true,
+   "score": 88,
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
-    "owner mails outside Cleveland (+8)"
+    "owner mails outside Cleveland (+8)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -51589,12 +51602,13 @@
    "total_fines": 0,
    "ward": "3",
    "neighborhood": "Broadway-Slavic Village",
-   "in_foreclosure": false,
-   "score": 63,
+   "in_foreclosure": true,
+   "score": 88,
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
-    "owner mails outside Cleveland (+8)"
+    "owner mails outside Cleveland (+8)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -58679,11 +58693,12 @@
    "total_fines": 0,
    "ward": "9",
    "neighborhood": "Glenville",
-   "in_foreclosure": false,
-   "score": 55,
+   "in_foreclosure": true,
+   "score": 80,
    "score_reasons": [
     "Active Condemnation",
-    "open > 180 days (+15)"
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -60994,11 +61009,12 @@
    "total_fines": 0,
    "ward": "1",
    "neighborhood": "Union-Miles",
-   "in_foreclosure": false,
-   "score": 55,
+   "in_foreclosure": true,
+   "score": 80,
    "score_reasons": [
     "Active Condemnation",
-    "open > 180 days (+15)"
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -61933,11 +61949,12 @@
    "total_fines": 0,
    "ward": "10",
    "neighborhood": "Collinwood-Nottingham",
-   "in_foreclosure": false,
-   "score": 55,
+   "in_foreclosure": true,
+   "score": 80,
    "score_reasons": [
     "Active Condemnation",
-    "open > 180 days (+15)"
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -63477,11 +63494,12 @@
    "total_fines": 0,
    "ward": "14",
    "neighborhood": "Stockyards",
-   "in_foreclosure": false,
-   "score": 55,
+   "in_foreclosure": true,
+   "score": 80,
    "score_reasons": [
     "Active Condemnation",
-    "open > 180 days (+15)"
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -65743,11 +65761,12 @@
    "total_fines": 0,
    "ward": "1",
    "neighborhood": "Mount Pleasant",
-   "in_foreclosure": false,
-   "score": 55,
+   "in_foreclosure": true,
+   "score": 80,
    "score_reasons": [
     "Active Condemnation",
-    "owner mails out of state (+15)"
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -67490,11 +67509,12 @@
    "total_fines": 0,
    "ward": "",
    "neighborhood": "",
-   "in_foreclosure": false,
-   "score": 55,
+   "in_foreclosure": true,
+   "score": 80,
    "score_reasons": [
     "Active Condemnation",
-    "open > 180 days (+15)"
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -70244,13 +70264,14 @@
    "total_fines": 0,
    "ward": "11",
    "neighborhood": "West Boulevard",
-   "in_foreclosure": false,
-   "score": 55,
+   "in_foreclosure": true,
+   "score": 80,
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
     "owner mails out of state (+15)",
-    "institutional/REO owner (-15)"
+    "institutional/REO owner (-15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -74656,14 +74677,15 @@
    "total_fines": 0,
    "ward": "10",
    "neighborhood": "Euclid-Green",
-   "in_foreclosure": false,
-   "score": 50,
+   "in_foreclosure": true,
+   "score": 75,
    "score_reasons": [
     "Civil Ticket (Residents First)",
     "Building Complaint Violation Notice",
     "2 open records (+5)",
     "multiple enforcement types (+10)",
-    "owner mails out of state (+15)"
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -79677,14 +79699,15 @@
    "total_fines": 0,
    "ward": "10",
    "neighborhood": "Collinwood-Nottingham",
-   "in_foreclosure": false,
-   "score": 50,
+   "in_foreclosure": true,
+   "score": 75,
    "score_reasons": [
     "Civil Ticket (Residents First)",
     "Building Complaint Violation Notice",
     "2 open records (+5)",
     "multiple enforcement types (+10)",
-    "owner mails out of state (+15)"
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -104274,11 +104297,12 @@
    "total_fines": 0,
    "ward": "11",
    "neighborhood": "Cudell",
-   "in_foreclosure": false,
-   "score": 35,
+   "in_foreclosure": true,
+   "score": 60,
    "score_reasons": [
     "Building Complaint Violation Notice",
-    "owner mails out of state (+15)"
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -105010,11 +105034,12 @@
    "total_fines": 0,
    "ward": "14",
    "neighborhood": "Clark-Fulton",
-   "in_foreclosure": false,
-   "score": 35,
+   "in_foreclosure": true,
+   "score": 60,
    "score_reasons": [
     "Building Complaint Violation Notice",
-    "owner mails out of state (+15)"
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -150517,11 +150542,12 @@
    "total_fines": 0,
    "ward": "1",
    "neighborhood": "Lee-Harvard",
-   "in_foreclosure": false,
-   "score": 30,
+   "in_foreclosure": true,
+   "score": 55,
    "score_reasons": [
     "Civil Ticket (Residents First)",
-    "owner mails out of state (+15)"
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -162129,11 +162155,12 @@
    "total_fines": 0,
    "ward": "9",
    "neighborhood": "Glenville",
-   "in_foreclosure": false,
-   "score": 28,
+   "in_foreclosure": true,
+   "score": 53,
    "score_reasons": [
     "Building Complaint Violation Notice",
-    "owner mails outside Cleveland (+8)"
+    "owner mails outside Cleveland (+8)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -190572,11 +190599,12 @@
    "total_fines": 0,
    "ward": "14",
    "neighborhood": "Brooklyn Centre",
-   "in_foreclosure": false,
-   "score": 25,
+   "in_foreclosure": true,
+   "score": 50,
    "score_reasons": [
     "Civil Ticket (Residents First)",
-    "individual owner (+10)"
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -197165,11 +197193,12 @@
    "total_fines": 0,
    "ward": "11",
    "neighborhood": "West Boulevard",
-   "in_foreclosure": false,
-   "score": 25,
+   "in_foreclosure": true,
+   "score": 50,
    "score_reasons": [
     "Civil Ticket (Residents First)",
-    "individual owner (+10)"
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -247664,10 +247693,11 @@
    "total_fines": 0,
    "ward": "6",
    "neighborhood": "Kinsman",
-   "in_foreclosure": false,
-   "score": 15,
+   "in_foreclosure": true,
+   "score": 40,
    "score_reasons": [
-    "Civil Ticket (Residents First)"
+    "Civil Ticket (Residents First)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -250681,12 +250711,13 @@
    "total_fines": 0,
    "ward": "10",
    "neighborhood": "Collinwood-Nottingham",
-   "in_foreclosure": false,
-   "score": 33,
+   "in_foreclosure": true,
+   "score": 58,
    "score_reasons": [
     "Civil Ticket (Residents First)",
     "owner mails outside Cleveland (+8)",
-    "individual owner (+10)"
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-11-01",
    "last_seen": "2026-11-01"

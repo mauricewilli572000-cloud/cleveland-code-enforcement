@@ -1,6 +1,6 @@
 {
  "meta": {
-  "updated_utc": "2026-11-01T21:44:46+00:00",
+  "updated_utc": "2026-11-02T01:43:39+00:00",
   "lead_count": 6149
  },
  "leads": [
@@ -122,6 +122,55 @@
    "last_seen": "2026-11-01"
   },
   {
+   "lead_id": "P:11531121",
+   "property_address": "15630 KIPLING AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44110",
+   "parcel": "11531121",
+   "owner_name": "TOPSTONE INVESTMENT LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "P O BOX 1478, BLUE SPRINGS, MO 64013",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Active Condemnation",
+    "Building Complaint Violation Notice"
+   ],
+   "open_records": 2,
+   "case_numbers": [
+    "V26039572"
+   ],
+   "cases_by_source": {
+    "condemnations": [],
+    "violation_notices": [
+     "V26039572"
+    ]
+   },
+   "violation_types": [
+    "Failure to Register"
+   ],
+   "description": "",
+   "oldest_open_days": 447,
+   "latest_date": "2026-09-15",
+   "total_fines": 0,
+   "ward": "10",
+   "neighborhood": "Collinwood-Nottingham",
+   "in_foreclosure": true,
+   "score": 100,
+   "score_reasons": [
+    "Active Condemnation",
+    "Building Complaint Violation Notice",
+    "2 open records (+5)",
+    "multiple enforcement types (+10)",
+    "open > 180 days (+15)",
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
    "lead_id": "P:13213027",
    "property_address": "6211 FULLERTON AVE",
    "city": "CLEVELAND",
@@ -185,6 +234,115 @@
    "last_seen": "2026-11-01"
   },
   {
+   "lead_id": "P:11124050",
+   "property_address": "13505 WOODWORTH",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44112",
+   "parcel": "11124050",
+   "owner_name": "RSN HOLDINGS 5, LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "17830 ENGLEWOOD DR UNIT 14, MIDDLEBURG HTS, OH 44130",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Board-Up (open/vacant/vandalized)",
+    "Civil Ticket (Residents First)",
+    "Active Condemnation"
+   ],
+   "open_records": 3,
+   "case_numbers": [
+    "B26043332",
+    "CT26010825"
+   ],
+   "cases_by_source": {
+    "board_ups": [
+     "B26043332"
+    ],
+    "civil_tickets": [
+     "CT26010825"
+    ],
+    "condemnations": []
+   },
+   "violation_types": [
+    "3101.10(e) Safety and Maintenance Exterior Property Areas"
+   ],
+   "description": "VACANT AND OPEN TO CASUAL ENTRY",
+   "oldest_open_days": 838,
+   "latest_date": "2026-10-08",
+   "total_fines": 0,
+   "ward": "9",
+   "neighborhood": "Collinwood-Nottingham",
+   "in_foreclosure": true,
+   "score": 100,
+   "score_reasons": [
+    "Board-Up (open/vacant/vandalized)",
+    "Civil Ticket (Residents First)",
+    "Active Condemnation",
+    "3 open records (+10)",
+    "multiple enforcement types (+10)",
+    "open > 180 days (+15)",
+    "owner mails outside Cleveland (+8)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:01610119",
+   "property_address": "3252 W 52ND ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44102",
+   "parcel": "01610119",
+   "owner_name": "SUMMERHOUSE PROJECTS LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "23232 PERALTA DR UNIT 216, LAGUNA HILLS, CA 92653",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Active Condemnation",
+    "Building Complaint Violation Notice"
+   ],
+   "open_records": 4,
+   "case_numbers": [
+    "V26037661",
+    "V26040145",
+    "V26046463"
+   ],
+   "cases_by_source": {
+    "condemnations": [],
+    "violation_notices": [
+     "V26037661",
+     "V26040145",
+     "V26046463"
+    ]
+   },
+   "violation_types": [
+    "Condemnation - Main Structure",
+    "Condemnation - Shed",
+    "Failure to Register"
+   ],
+   "description": "PURSUANT TO SECTION 3103.09, 367.04,369.19 AND 369.21 OF THE CODIFIED ORDINANCES OF THE CITY OF CLEVELAND, THE COMMISSIONER OF BUILDING AND HOUSING DOES HEREBY DECLARE THE STRUCTURE KNOWN AS AND LOCATED AT: [ADDRESS] TO BE A PUBLIC NUISANCE IN THAT IT CONSTITUTES AN EMMINENT DANGER AND PERIL TO HUMA",
+   "oldest_open_days": 45,
+   "latest_date": "2026-10-28",
+   "total_fines": 0,
+   "ward": "14",
+   "neighborhood": "Stockyards",
+   "in_foreclosure": true,
+   "score": 100,
+   "score_reasons": [
+    "Active Condemnation",
+    "Building Complaint Violation Notice",
+    "4 open records (+15)",
+    "multiple enforcement types (+10)",
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
    "lead_id": "P:11505097",
    "property_address": "824 E 149TH ST",
    "city": "CLEVELAND",
@@ -242,6 +400,94 @@
     "open > 180 days (+15)",
     "owner mails outside Cleveland (+8)",
     "individual owner (+10)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:10712044",
+   "property_address": "1342 92 AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44106",
+   "parcel": "10712044",
+   "owner_name": "COLLINS HATTIE C",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "23860 HARTLAND DR, EUCLID, OH 44123",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation",
+    "Building Complaint Violation Notice"
+   ],
+   "open_records": 2,
+   "case_numbers": [
+    "V26036910"
+   ],
+   "cases_by_source": {
+    "condemnations": [],
+    "violation_notices": [
+     "V26036910"
+    ]
+   },
+   "violation_types": [
+    "Condemnation - Main Structure"
+   ],
+   "description": "",
+   "oldest_open_days": 52,
+   "latest_date": "2026-09-10",
+   "total_fines": 0,
+   "ward": "8",
+   "neighborhood": "Hough",
+   "in_foreclosure": true,
+   "score": 98,
+   "score_reasons": [
+    "Active Condemnation",
+    "Building Complaint Violation Notice",
+    "2 open records (+5)",
+    "multiple enforcement types (+10)",
+    "owner mails outside Cleveland (+8)",
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:13211087",
+   "property_address": "3892 E 54TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44105",
+   "parcel": "13211087",
+   "owner_name": "GAFFNEY, MATTHEW J.",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "2011 W SPRAGUE RD, BROADVIEW HEIGHTS, OH 44147",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 289,
+   "latest_date": "2026-01-16",
+   "total_fines": 0,
+   "ward": "2",
+   "neighborhood": "Broadway-Slavic Village",
+   "in_foreclosure": true,
+   "score": 98,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "owner mails outside Cleveland (+8)",
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -742,6 +988,54 @@
    "last_seen": "2026-11-01"
   },
   {
+   "lead_id": "P:12501077",
+   "property_address": "6124 CARPENTER AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44127",
+   "parcel": "12501077",
+   "owner_name": "EVERHOLD REALTY LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "13909 BENWOOD AVE, CLEVELAND, OH 44105",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Civil Ticket (Residents First)",
+    "Active Condemnation"
+   ],
+   "open_records": 2,
+   "case_numbers": [
+    "CT26008519"
+   ],
+   "cases_by_source": {
+    "civil_tickets": [
+     "CT26008519"
+    ],
+    "condemnations": []
+   },
+   "violation_types": [
+    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;"
+   ],
+   "description": "This rental property has not complied with the rental registration ordinance",
+   "oldest_open_days": 1248,
+   "latest_date": "2026-09-17",
+   "total_fines": 0,
+   "ward": "3",
+   "neighborhood": "Broadway-Slavic Village",
+   "in_foreclosure": true,
+   "score": 95,
+   "score_reasons": [
+    "Civil Ticket (Residents First)",
+    "Active Condemnation",
+    "2 open records (+5)",
+    "multiple enforcement types (+10)",
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
    "lead_id": "P:11112045",
    "property_address": "12819 ST CLAIR AVE",
    "city": "CLEVELAND",
@@ -1199,6 +1493,206 @@
    "last_seen": "2026-11-01"
   },
   {
+   "lead_id": "P:12014072",
+   "property_address": "12332 ASHBURY AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44106",
+   "parcel": "12014072",
+   "owner_name": "STEPHENS, AARON M.",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "12332 ASHBURY AVE, CLEVELAND, OH 44106",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 419,
+   "latest_date": "2025-09-08",
+   "total_fines": 0,
+   "ward": "6",
+   "neighborhood": "Glenville",
+   "in_foreclosure": true,
+   "score": 90,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:11314085",
+   "property_address": "16001 CORSICA AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44110",
+   "parcel": "11314085",
+   "owner_name": "MOSLEY, ANTHONY",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "16001 CORSICA AVE, CLEVELAND, OH 44110",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 269,
+   "latest_date": "2026-02-05",
+   "total_fines": 0,
+   "ward": "10",
+   "neighborhood": "North Shore Collinwood",
+   "in_foreclosure": true,
+   "score": 90,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:00515087",
+   "property_address": "3027 W 105",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44111",
+   "parcel": "00515087",
+   "owner_name": "ASAAD, RASHAD",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "3027 W 105TH ST, CLEVELAND, OH 44111",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 2508,
+   "latest_date": "2019-12-20",
+   "total_fines": 0,
+   "ward": "12",
+   "neighborhood": "Cudell",
+   "in_foreclosure": true,
+   "score": 90,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:13207077",
+   "property_address": "6809 FORMAN AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44105",
+   "parcel": "13207077",
+   "owner_name": "ZHANG, QIMENG",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "PO BOX 604171, CLEVELAND, OH 44104",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 243,
+   "latest_date": "2026-03-03",
+   "total_fines": 0,
+   "ward": "3",
+   "neighborhood": "Broadway-Slavic Village",
+   "in_foreclosure": true,
+   "score": 90,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:10618016",
+   "property_address": "7705 MELROSE AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44103",
+   "parcel": "10618016",
+   "owner_name": "CAVER, MARY LEE",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "7705 MELROSE AVE, CLEVELAND, OH 44103-3363",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation",
+    "Building Complaint Violation Notice"
+   ],
+   "open_records": 2,
+   "case_numbers": [
+    "V26037412"
+   ],
+   "cases_by_source": {
+    "condemnations": [],
+    "violation_notices": [
+     "V26037412"
+    ]
+   },
+   "violation_types": [
+    "Condemnation - Main Structure"
+   ],
+   "description": "",
+   "oldest_open_days": 52,
+   "latest_date": "2026-09-10",
+   "total_fines": 0,
+   "ward": "8",
+   "neighborhood": "Hough",
+   "in_foreclosure": true,
+   "score": 90,
+   "score_reasons": [
+    "Active Condemnation",
+    "Building Complaint Violation Notice",
+    "2 open records (+5)",
+    "multiple enforcement types (+10)",
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
    "lead_id": "P:12925065",
    "property_address": "2987 E 128TH ST",
    "city": "CLEVELAND",
@@ -1630,6 +2124,120 @@
    "last_seen": "2026-11-01"
   },
   {
+   "lead_id": "P:12132012",
+   "property_address": "10715 MOUNT CARMEL RD",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44104",
+   "parcel": "12132012",
+   "owner_name": "NEO HOMES OFFERS, LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "6545 MARKET AVE SUITE 100, CANTON, OH 44720",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 411,
+   "latest_date": "2025-09-16",
+   "total_fines": 0,
+   "ward": "6",
+   "neighborhood": "Buckeye-Woodhill",
+   "in_foreclosure": true,
+   "score": 88,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "owner mails outside Cleveland (+8)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:12526001",
+   "property_address": "5605 BROADWAY",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44127",
+   "parcel": "12526001",
+   "owner_name": "THE VILLAGE PARTNERSHIP, LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "P.O. BOX 31777, INDEPENDENCE, OH 44131",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 1752,
+   "latest_date": "2022-01-14",
+   "total_fines": 0,
+   "ward": "3",
+   "neighborhood": "Broadway-Slavic Village",
+   "in_foreclosure": true,
+   "score": 88,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "owner mails outside Cleveland (+8)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:12526004",
+   "property_address": "5619 BROADWAY AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44127",
+   "parcel": "12526004",
+   "owner_name": "THE VILLAGE PARTNERSHIP, LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "P O BOX 31777, SEVEN HILLS, OH 44131",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 1752,
+   "latest_date": "2022-01-14",
+   "total_fines": 0,
+   "ward": "3",
+   "neighborhood": "Broadway-Slavic Village",
+   "in_foreclosure": true,
+   "score": 88,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "owner mails outside Cleveland (+8)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
    "lead_id": "P:01709005",
    "property_address": "10007 DENISON AVE",
    "city": "CLEVELAND",
@@ -2022,54 +2630,6 @@
     "multiple enforcement types (+10)",
     "owner mails out of state (+15)",
     "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:11531121",
-   "property_address": "15630 KIPLING AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44110",
-   "parcel": "11531121",
-   "owner_name": "TOPSTONE INVESTMENT LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "P O BOX 1478, BLUE SPRINGS, MO 64013",
-   "out_of_state_owner": true,
-   "lead_types": [
-    "Active Condemnation",
-    "Building Complaint Violation Notice"
-   ],
-   "open_records": 2,
-   "case_numbers": [
-    "V26039572"
-   ],
-   "cases_by_source": {
-    "condemnations": [],
-    "violation_notices": [
-     "V26039572"
-    ]
-   },
-   "violation_types": [
-    "Failure to Register"
-   ],
-   "description": "",
-   "oldest_open_days": 447,
-   "latest_date": "2026-09-15",
-   "total_fines": 0,
-   "ward": "10",
-   "neighborhood": "Collinwood-Nottingham",
-   "in_foreclosure": false,
-   "score": 85,
-   "score_reasons": [
-    "Active Condemnation",
-    "Building Complaint Violation Notice",
-    "2 open records (+5)",
-    "multiple enforcement types (+10)",
-    "open > 180 days (+15)",
-    "owner mails out of state (+15)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -3435,60 +3995,6 @@
    "total_fines": 0,
    "ward": "6",
    "neighborhood": "Buckeye-Shaker Square",
-   "in_foreclosure": false,
-   "score": 83,
-   "score_reasons": [
-    "Board-Up (open/vacant/vandalized)",
-    "Civil Ticket (Residents First)",
-    "Active Condemnation",
-    "3 open records (+10)",
-    "multiple enforcement types (+10)",
-    "open > 180 days (+15)",
-    "owner mails outside Cleveland (+8)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:11124050",
-   "property_address": "13505 WOODWORTH",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44112",
-   "parcel": "11124050",
-   "owner_name": "RSN HOLDINGS 5, LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "17830 ENGLEWOOD DR UNIT 14, MIDDLEBURG HTS, OH 44130",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Board-Up (open/vacant/vandalized)",
-    "Civil Ticket (Residents First)",
-    "Active Condemnation"
-   ],
-   "open_records": 3,
-   "case_numbers": [
-    "B26043332",
-    "CT26010825"
-   ],
-   "cases_by_source": {
-    "board_ups": [
-     "B26043332"
-    ],
-    "civil_tickets": [
-     "CT26010825"
-    ],
-    "condemnations": []
-   },
-   "violation_types": [
-    "3101.10(e) Safety and Maintenance Exterior Property Areas"
-   ],
-   "description": "VACANT AND OPEN TO CASUAL ENTRY",
-   "oldest_open_days": 838,
-   "latest_date": "2026-10-08",
-   "total_fines": 0,
-   "ward": "9",
-   "neighborhood": "Collinwood-Nottingham",
    "in_foreclosure": false,
    "score": 83,
    "score_reasons": [
@@ -8316,59 +8822,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:01610119",
-   "property_address": "3252 W 52ND ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44102",
-   "parcel": "01610119",
-   "owner_name": "SUMMERHOUSE PROJECTS LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "23232 PERALTA DR UNIT 216, LAGUNA HILLS, CA 92653",
-   "out_of_state_owner": true,
-   "lead_types": [
-    "Active Condemnation",
-    "Building Complaint Violation Notice"
-   ],
-   "open_records": 4,
-   "case_numbers": [
-    "V26037661",
-    "V26040145",
-    "V26046463"
-   ],
-   "cases_by_source": {
-    "condemnations": [],
-    "violation_notices": [
-     "V26037661",
-     "V26040145",
-     "V26046463"
-    ]
-   },
-   "violation_types": [
-    "Condemnation - Main Structure",
-    "Condemnation - Shed",
-    "Failure to Register"
-   ],
-   "description": "PURSUANT TO SECTION 3103.09, 367.04,369.19 AND 369.21 OF THE CODIFIED ORDINANCES OF THE CITY OF CLEVELAND, THE COMMISSIONER OF BUILDING AND HOUSING DOES HEREBY DECLARE THE STRUCTURE KNOWN AS AND LOCATED AT: [ADDRESS] TO BE A PUBLIC NUISANCE IN THAT IT CONSTITUTES AN EMMINENT DANGER AND PERIL TO HUMA",
-   "oldest_open_days": 45,
-   "latest_date": "2026-10-28",
-   "total_fines": 0,
-   "ward": "14",
-   "neighborhood": "Stockyards",
-   "in_foreclosure": false,
-   "score": 80,
-   "score_reasons": [
-    "Active Condemnation",
-    "Building Complaint Violation Notice",
-    "4 open records (+15)",
-    "multiple enforcement types (+10)",
-    "owner mails out of state (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:12813052",
    "property_address": "9902 STOUGHTON AVE",
    "city": "CLEVELAND",
@@ -8538,6 +8991,267 @@
     "5 open records (+20)",
     "multiple enforcement types (+10)",
     "individual owner (+10)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:10913102",
+   "property_address": "10810 GOODING AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44108",
+   "parcel": "10913102",
+   "owner_name": "SYNERGY PROPERTY INVESTMENTS LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "10810 GOODING AVE, CLEVELAND, OH 44108",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 4080,
+   "latest_date": "2015-08-31",
+   "total_fines": 0,
+   "ward": "9",
+   "neighborhood": "Glenville",
+   "in_foreclosure": true,
+   "score": 80,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:13915138",
+   "property_address": "14914 GLENDALE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "13915138",
+   "owner_name": "GREEN TURTLE LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "2313 LEE RD SUITE 344, CLEVELAND HTS, OH 44118",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 3497,
+   "latest_date": "2017-04-05",
+   "total_fines": 0,
+   "ward": "1",
+   "neighborhood": "Union-Miles",
+   "in_foreclosure": true,
+   "score": 80,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:11607001",
+   "property_address": "18006 S WATERLOO RD",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44119",
+   "parcel": "11607001",
+   "owner_name": "CENTURYPLATING INC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "18006 S WATERLOO RD, CLEVELAND, OH 44119-3223",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 808,
+   "latest_date": "2024-08-15",
+   "total_fines": 0,
+   "ward": "10",
+   "neighborhood": "Collinwood-Nottingham",
+   "in_foreclosure": true,
+   "score": 80,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:00623039",
+   "property_address": "3054 W 48TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44102",
+   "parcel": "00623039",
+   "owner_name": "TALPIOT INVESTMENTS LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "3805 MURIEL AVE UNIT 3, CLEVELAND, OH 44109",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 530,
+   "latest_date": "2025-05-20",
+   "total_fines": 0,
+   "ward": "14",
+   "neighborhood": "Stockyards",
+   "in_foreclosure": true,
+   "score": 80,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:13913069",
+   "property_address": "3778 E 151ST ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44128",
+   "parcel": "13913069",
+   "owner_name": "ABBY REAL ESTATE LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "167 PENBROOKE CLOSE, CALGARY, AB T2A3N9",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 81,
+   "latest_date": "2026-08-12",
+   "total_fines": 0,
+   "ward": "1",
+   "neighborhood": "Mount Pleasant",
+   "in_foreclosure": true,
+   "score": 80,
+   "score_reasons": [
+    "Active Condemnation",
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:12523003",
+   "property_address": "5613 BROADWAY",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44127",
+   "parcel": "12523003",
+   "owner_name": "CLEVELAND TRACK MATERIAL, INC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "6600 BESSEMER AVE, CLEVELAND, OH 44127",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 1752,
+   "latest_date": "2022-01-14",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": true,
+   "score": 80,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:01719004",
+   "property_address": "9907 DENISON AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44102",
+   "parcel": "01719004",
+   "owner_name": "GARDEN ASSET MANAGEMENT LLC",
+   "owner_is_entity": true,
+   "owner_class": "institutional",
+   "mailing_address": "9 UNION AVE, GARFIELD, NJ 07026",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 1755,
+   "latest_date": "2022-01-11",
+   "total_fines": 0,
+   "ward": "11",
+   "neighborhood": "West Boulevard",
+   "in_foreclosure": true,
+   "score": 80,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "owner mails out of state (+15)",
+    "institutional/REO owner (-15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -11572,6 +12286,110 @@
    "last_seen": "2026-11-01"
   },
   {
+   "lead_id": "P:11701041",
+   "property_address": "1762 ALCOY RD",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44112",
+   "parcel": "11701041",
+   "owner_name": "AGENCY REALTY OH LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "10 BROADMAN PKWY, JERSEY CITY, NJ 07305",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Civil Ticket (Residents First)",
+    "Building Complaint Violation Notice"
+   ],
+   "open_records": 2,
+   "case_numbers": [
+    "CT26008489",
+    "V26045329"
+   ],
+   "cases_by_source": {
+    "civil_tickets": [
+     "CT26008489"
+    ],
+    "violation_notices": [
+     "V26045329"
+    ]
+   },
+   "violation_types": [
+    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;",
+    "Failure to Register"
+   ],
+   "description": "This rental property has not complied with the rental registration ordinance",
+   "oldest_open_days": 45,
+   "latest_date": "2026-10-20",
+   "total_fines": 0,
+   "ward": "10",
+   "neighborhood": "Euclid-Green",
+   "in_foreclosure": true,
+   "score": 75,
+   "score_reasons": [
+    "Civil Ticket (Residents First)",
+    "Building Complaint Violation Notice",
+    "2 open records (+5)",
+    "multiple enforcement types (+10)",
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:11528062",
+   "property_address": "909 STEVENSON RD",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44110",
+   "parcel": "11528062",
+   "owner_name": "REESE ROADWAY SERVICES, LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "2602 EAST GLASS, BAKERSFIELD, CA 85042",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Civil Ticket (Residents First)",
+    "Building Complaint Violation Notice"
+   ],
+   "open_records": 2,
+   "case_numbers": [
+    "CT26011329",
+    "V26038076"
+   ],
+   "cases_by_source": {
+    "civil_tickets": [
+     "CT26011329"
+    ],
+    "violation_notices": [
+     "V26038076"
+    ]
+   },
+   "violation_types": [
+    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;",
+    "Failure to Register"
+   ],
+   "description": "This rental property has not complied with the rental registration ordinance",
+   "oldest_open_days": 58,
+   "latest_date": "2026-10-13",
+   "total_fines": 0,
+   "ward": "10",
+   "neighborhood": "Collinwood-Nottingham",
+   "in_foreclosure": true,
+   "score": 75,
+   "score_reasons": [
+    "Civil Ticket (Residents First)",
+    "Building Complaint Violation Notice",
+    "2 open records (+5)",
+    "multiple enforcement types (+10)",
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
    "lead_id": "P:00904075",
    "property_address": "3905 W 18TH ST",
    "city": "CLEVELAND",
@@ -12922,54 +13740,6 @@
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
-    "owner mails outside Cleveland (+8)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:10712044",
-   "property_address": "1342 92 AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44106",
-   "parcel": "10712044",
-   "owner_name": "COLLINS HATTIE C",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "23860 HARTLAND DR, EUCLID, OH 44123",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation",
-    "Building Complaint Violation Notice"
-   ],
-   "open_records": 2,
-   "case_numbers": [
-    "V26036910"
-   ],
-   "cases_by_source": {
-    "condemnations": [],
-    "violation_notices": [
-     "V26036910"
-    ]
-   },
-   "violation_types": [
-    "Condemnation - Main Structure"
-   ],
-   "description": "",
-   "oldest_open_days": 52,
-   "latest_date": "2026-09-10",
-   "total_fines": 0,
-   "ward": "8",
-   "neighborhood": "Hough",
-   "in_foreclosure": false,
-   "score": 73,
-   "score_reasons": [
-    "Active Condemnation",
-    "Building Complaint Violation Notice",
-    "2 open records (+5)",
-    "multiple enforcement types (+10)",
     "owner mails outside Cleveland (+8)",
     "individual owner (+10)"
    ],
@@ -15759,44 +16529,6 @@
    "total_fines": 0,
    "ward": "14",
    "neighborhood": "Brooklyn Centre",
-   "in_foreclosure": false,
-   "score": 73,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)",
-    "owner mails outside Cleveland (+8)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:13211087",
-   "property_address": "3892 E 54TH ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44105",
-   "parcel": "13211087",
-   "owner_name": "GAFFNEY, MATTHEW J.",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "2011 W SPRAGUE RD, BROADVIEW HEIGHTS, OH 44147",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 289,
-   "latest_date": "2026-01-16",
-   "total_fines": 0,
-   "ward": "2",
-   "neighborhood": "Broadway-Slavic Village",
    "in_foreclosure": false,
    "score": 73,
    "score_reasons": [
@@ -24505,53 +25237,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:12501077",
-   "property_address": "6124 CARPENTER AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44127",
-   "parcel": "12501077",
-   "owner_name": "EVERHOLD REALTY LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "13909 BENWOOD AVE, CLEVELAND, OH 44105",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Civil Ticket (Residents First)",
-    "Active Condemnation"
-   ],
-   "open_records": 2,
-   "case_numbers": [
-    "CT26008519"
-   ],
-   "cases_by_source": {
-    "civil_tickets": [
-     "CT26008519"
-    ],
-    "condemnations": []
-   },
-   "violation_types": [
-    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;"
-   ],
-   "description": "This rental property has not complied with the rental registration ordinance",
-   "oldest_open_days": 1248,
-   "latest_date": "2026-09-17",
-   "total_fines": 0,
-   "ward": "3",
-   "neighborhood": "Broadway-Slavic Village",
-   "in_foreclosure": false,
-   "score": 70,
-   "score_reasons": [
-    "Civil Ticket (Residents First)",
-    "Active Condemnation",
-    "2 open records (+5)",
-    "multiple enforcement types (+10)",
-    "open > 180 days (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:12501078",
    "property_address": "6204 CARPENTER AVE",
    "city": "CLEVELAND",
@@ -30669,43 +31354,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:12014072",
-   "property_address": "12332 ASHBURY AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44106",
-   "parcel": "12014072",
-   "owner_name": "STEPHENS, AARON M.",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "12332 ASHBURY AVE, CLEVELAND, OH 44106",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 419,
-   "latest_date": "2025-09-08",
-   "total_fines": 0,
-   "ward": "6",
-   "neighborhood": "Glenville",
-   "in_foreclosure": false,
-   "score": 65,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:11024074",
    "property_address": "12341 CASTLEWOOD AVE",
    "city": "CLEVELAND",
@@ -33965,43 +34613,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:11314085",
-   "property_address": "16001 CORSICA AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44110",
-   "parcel": "11314085",
-   "owner_name": "MOSLEY, ANTHONY",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "16001 CORSICA AVE, CLEVELAND, OH 44110",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 269,
-   "latest_date": "2026-02-05",
-   "total_fines": 0,
-   "ward": "10",
-   "neighborhood": "North Shore Collinwood",
-   "in_foreclosure": false,
-   "score": 65,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:10622092",
    "property_address": "1602 E 85 ST",
    "city": "CLEVELAND",
@@ -36619,43 +37230,6 @@
    "total_fines": 0,
    "ward": "5",
    "neighborhood": "Kinsman",
-   "in_foreclosure": false,
-   "score": 65,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:00515087",
-   "property_address": "3027 W 105",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44111",
-   "parcel": "00515087",
-   "owner_name": "ASAAD, RASHAD",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "3027 W 105TH ST, CLEVELAND, OH 44111",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 2508,
-   "latest_date": "2019-12-20",
-   "total_fines": 0,
-   "ward": "12",
-   "neighborhood": "Cudell",
    "in_foreclosure": false,
    "score": 65,
    "score_reasons": [
@@ -44273,43 +44847,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:13207077",
-   "property_address": "6809 FORMAN AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44105",
-   "parcel": "13207077",
-   "owner_name": "ZHANG, QIMENG",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "PO BOX 604171, CLEVELAND, OH 44104",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 243,
-   "latest_date": "2026-03-03",
-   "total_fines": 0,
-   "ward": "3",
-   "neighborhood": "Broadway-Slavic Village",
-   "in_foreclosure": false,
-   "score": 65,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:13215130",
    "property_address": "6816 FULLERTON AVE",
    "city": "CLEVELAND",
@@ -45349,53 +45886,6 @@
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:10618016",
-   "property_address": "7705 MELROSE AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44103",
-   "parcel": "10618016",
-   "owner_name": "CAVER, MARY LEE",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "7705 MELROSE AVE, CLEVELAND, OH 44103-3363",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation",
-    "Building Complaint Violation Notice"
-   ],
-   "open_records": 2,
-   "case_numbers": [
-    "V26037412"
-   ],
-   "cases_by_source": {
-    "condemnations": [],
-    "violation_notices": [
-     "V26037412"
-    ]
-   },
-   "violation_types": [
-    "Condemnation - Main Structure"
-   ],
-   "description": "",
-   "oldest_open_days": 52,
-   "latest_date": "2026-09-10",
-   "total_fines": 0,
-   "ward": "8",
-   "neighborhood": "Hough",
-   "in_foreclosure": false,
-   "score": 65,
-   "score_reasons": [
-    "Active Condemnation",
-    "Building Complaint Violation Notice",
-    "2 open records (+5)",
-    "multiple enforcement types (+10)",
     "individual owner (+10)"
    ],
    "added_date": "2026-10-31",
@@ -48034,43 +48524,6 @@
    "total_fines": 0,
    "ward": "9",
    "neighborhood": "Glenville",
-   "in_foreclosure": false,
-   "score": 63,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)",
-    "owner mails outside Cleveland (+8)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:12132012",
-   "property_address": "10715 MOUNT CARMEL RD",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44104",
-   "parcel": "12132012",
-   "owner_name": "NEO HOMES OFFERS, LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "6545 MARKET AVE SUITE 100, CANTON, OH 44720",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 411,
-   "latest_date": "2025-09-16",
-   "total_fines": 0,
-   "ward": "6",
-   "neighborhood": "Buckeye-Woodhill",
    "in_foreclosure": false,
    "score": 63,
    "score_reasons": [
@@ -52457,80 +52910,6 @@
    "owner_is_entity": true,
    "owner_class": "entity",
    "mailing_address": "6500 DAISY AVE, INDEPENDENCE, OH 44131",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 1752,
-   "latest_date": "2022-01-14",
-   "total_fines": 0,
-   "ward": "3",
-   "neighborhood": "Broadway-Slavic Village",
-   "in_foreclosure": false,
-   "score": 63,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)",
-    "owner mails outside Cleveland (+8)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:12526001",
-   "property_address": "5605 BROADWAY",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44127",
-   "parcel": "12526001",
-   "owner_name": "THE VILLAGE PARTNERSHIP, LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "P.O. BOX 31777, INDEPENDENCE, OH 44131",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 1752,
-   "latest_date": "2022-01-14",
-   "total_fines": 0,
-   "ward": "3",
-   "neighborhood": "Broadway-Slavic Village",
-   "in_foreclosure": false,
-   "score": 63,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)",
-    "owner mails outside Cleveland (+8)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:12526004",
-   "property_address": "5619 BROADWAY AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44127",
-   "parcel": "12526004",
-   "owner_name": "THE VILLAGE PARTNERSHIP, LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "P O BOX 31777, SEVEN HILLS, OH 44131",
    "out_of_state_owner": false,
    "lead_types": [
     "Active Condemnation"
@@ -57654,6 +58033,92 @@
    "last_seen": "2026-11-01"
   },
   {
+   "lead_id": "P:00522138",
+   "property_address": "2092 W 98TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44102",
+   "parcel": "00522138",
+   "owner_name": "TOPSTONE INVESTMENT LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "P O BOX 1478, BLUE SPRINGS, MO 64013",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Building Complaint Violation Notice"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "V26039319"
+   ],
+   "cases_by_source": {
+    "violation_notices": [
+     "V26039319"
+    ]
+   },
+   "violation_types": [
+    "Failure to Register"
+   ],
+   "description": "",
+   "oldest_open_days": 48,
+   "latest_date": "2026-09-14",
+   "total_fines": 0,
+   "ward": "11",
+   "neighborhood": "Cudell",
+   "in_foreclosure": true,
+   "score": 60,
+   "score_reasons": [
+    "Building Complaint Violation Notice",
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:00726005",
+   "property_address": "3104 ERIN AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44113",
+   "parcel": "00726005",
+   "owner_name": "TOPSTONE INVESTMENT LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "P O BOX 1478, BLUE SPRINGS, MO 64013",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Building Complaint Violation Notice"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "V26039317"
+   ],
+   "cases_by_source": {
+    "violation_notices": [
+     "V26039317"
+    ]
+   },
+   "violation_types": [
+    "Failure to Register"
+   ],
+   "description": "",
+   "oldest_open_days": 48,
+   "latest_date": "2026-09-14",
+   "total_fines": 0,
+   "ward": "14",
+   "neighborhood": "Clark-Fulton",
+   "in_foreclosure": true,
+   "score": 60,
+   "score_reasons": [
+    "Building Complaint Violation Notice",
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
    "lead_id": "P:11023048",
    "property_address": "12404 TUSCORA AVE",
    "city": "CLEVELAND",
@@ -59539,6 +60004,50 @@
    "last_seen": "2026-11-01"
   },
   {
+   "lead_id": "P:11525009",
+   "property_address": "15810 HOLMES AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44110",
+   "parcel": "11525009",
+   "owner_name": "JACKSON, CLARISSA & RICKEY",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "12470 CAVES RD, CHESTERLAND, OH 44026",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Civil Ticket (Residents First)"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "CT26011810"
+   ],
+   "cases_by_source": {
+    "civil_tickets": [
+     "CT26011810"
+    ]
+   },
+   "violation_types": [
+    "369.18 Exterior Property Areas"
+   ],
+   "description": "ABANDONED TRAILER PARKED IN THE PARKING LOT.",
+   "oldest_open_days": 6,
+   "latest_date": "2026-10-26",
+   "total_fines": 0,
+   "ward": "10",
+   "neighborhood": "Collinwood-Nottingham",
+   "in_foreclosure": true,
+   "score": 58,
+   "score_reasons": [
+    "Civil Ticket (Residents First)",
+    "owner mails outside Cleveland (+8)",
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-11-01",
+   "last_seen": "2026-11-01"
+  },
+  {
    "lead_id": "P:13121034",
    "property_address": "3453 E 53RD ST",
    "city": "CLEVELAND",
@@ -60304,42 +60813,6 @@
    "score_reasons": [
     "Active Condemnation",
     "owner mails out of state (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:10913102",
-   "property_address": "10810 GOODING AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44108",
-   "parcel": "10913102",
-   "owner_name": "SYNERGY PROPERTY INVESTMENTS LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "10810 GOODING AVE, CLEVELAND, OH 44108",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 4080,
-   "latest_date": "2015-08-31",
-   "total_fines": 0,
-   "ward": "9",
-   "neighborhood": "Glenville",
-   "in_foreclosure": false,
-   "score": 55,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -62514,42 +62987,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:13915138",
-   "property_address": "14914 GLENDALE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "",
-   "parcel": "13915138",
-   "owner_name": "GREEN TURTLE LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "2313 LEE RD SUITE 344, CLEVELAND HTS, OH 44118",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 3497,
-   "latest_date": "2017-04-05",
-   "total_fines": 0,
-   "ward": "1",
-   "neighborhood": "Union-Miles",
-   "in_foreclosure": false,
-   "score": 55,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:11630051",
    "property_address": "1493 LARCHMONT RD",
    "city": "CLEVELAND",
@@ -63448,42 +63885,6 @@
     "Building Complaint Violation Notice",
     "2 open records (+5)",
     "multiple enforcement types (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:11607001",
-   "property_address": "18006 S WATERLOO RD",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44119",
-   "parcel": "11607001",
-   "owner_name": "CENTURYPLATING INC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "18006 S WATERLOO RD, CLEVELAND, OH 44119-3223",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 808,
-   "latest_date": "2024-08-15",
-   "total_fines": 0,
-   "ward": "10",
-   "neighborhood": "Collinwood-Nottingham",
-   "in_foreclosure": false,
-   "score": 55,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -64896,42 +65297,6 @@
    "total_fines": 0,
    "ward": "3",
    "neighborhood": "Broadway-Slavic Village",
-   "in_foreclosure": false,
-   "score": 55,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:00623039",
-   "property_address": "3054 W 48TH ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44102",
-   "parcel": "00623039",
-   "owner_name": "TALPIOT INVESTMENTS LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "3805 MURIEL AVE UNIT 3, CLEVELAND, OH 44109",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 530,
-   "latest_date": "2025-05-20",
-   "total_fines": 0,
-   "ward": "14",
-   "neighborhood": "Stockyards",
    "in_foreclosure": false,
    "score": 55,
    "score_reasons": [
@@ -67058,42 +67423,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:13913069",
-   "property_address": "3778 E 151ST ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44128",
-   "parcel": "13913069",
-   "owner_name": "ABBY REAL ESTATE LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "167 PENBROOKE CLOSE, CALGARY, AB T2A3N9",
-   "out_of_state_owner": true,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 81,
-   "latest_date": "2026-08-12",
-   "total_fines": 0,
-   "ward": "1",
-   "neighborhood": "Mount Pleasant",
-   "in_foreclosure": false,
-   "score": 55,
-   "score_reasons": [
-    "Active Condemnation",
-    "owner mails out of state (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:02531091",
    "property_address": "3810 SILSBY RD",
    "city": "CLEVELAND",
@@ -68795,42 +69124,6 @@
    "total_fines": 0,
    "ward": "7",
    "neighborhood": "Detroit Shoreway",
-   "in_foreclosure": false,
-   "score": 55,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:12523003",
-   "property_address": "5613 BROADWAY",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44127",
-   "parcel": "12523003",
-   "owner_name": "CLEVELAND TRACK MATERIAL, INC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "6600 BESSEMER AVE, CLEVELAND, OH 44127",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 1752,
-   "latest_date": "2022-01-14",
-   "total_fines": 0,
-   "ward": "",
-   "neighborhood": "",
    "in_foreclosure": false,
    "score": 55,
    "score_reasons": [
@@ -71502,44 +71795,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:01719004",
-   "property_address": "9907 DENISON AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44102",
-   "parcel": "01719004",
-   "owner_name": "GARDEN ASSET MANAGEMENT LLC",
-   "owner_is_entity": true,
-   "owner_class": "institutional",
-   "mailing_address": "9 UNION AVE, GARFIELD, NJ 07026",
-   "out_of_state_owner": true,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 1755,
-   "latest_date": "2022-01-11",
-   "total_fines": 0,
-   "ward": "11",
-   "neighborhood": "West Boulevard",
-   "in_foreclosure": false,
-   "score": 55,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)",
-    "owner mails out of state (+15)",
-    "institutional/REO owner (-15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:01701051",
    "property_address": "9908 DENISON AVE",
    "city": "CLEVELAND",
@@ -71998,6 +72253,49 @@
     "2 open records (+5)",
     "multiple enforcement types (+10)",
     "individual owner (+10)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:14208060",
+   "property_address": "4262 E 151ST ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44128",
+   "parcel": "14208060",
+   "owner_name": "SAARR PROPERTIES, LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "8224 PRITCHETT FARM LN, RALEIGH, NC 27606",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Civil Ticket (Residents First)"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "CT26009468"
+   ],
+   "cases_by_source": {
+    "civil_tickets": [
+     "CT26009468"
+    ]
+   },
+   "violation_types": [
+    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;"
+   ],
+   "description": "Failure to register rental property",
+   "oldest_open_days": 38,
+   "latest_date": "2026-09-24",
+   "total_fines": 0,
+   "ward": "1",
+   "neighborhood": "Lee-Harvard",
+   "in_foreclosure": true,
+   "score": 55,
+   "score_reasons": [
+    "Civil Ticket (Residents First)",
+    "owner mails out of state (+15)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -72809,6 +73107,49 @@
     "multiple enforcement types (+10)",
     "owner mails outside Cleveland (+8)",
     "individual owner (+10)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:10906014",
+   "property_address": "1109 E 97 ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44108",
+   "parcel": "10906014",
+   "owner_name": "GSD 3 LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "4901 TURNEY RD, GARFIELD HTS, OH 44125",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Building Complaint Violation Notice"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "V26042352"
+   ],
+   "cases_by_source": {
+    "violation_notices": [
+     "V26042352"
+    ]
+   },
+   "violation_types": [
+    "Exterior Maintenance"
+   ],
+   "description": "",
+   "oldest_open_days": 26,
+   "latest_date": "2026-10-06",
+   "total_fines": 0,
+   "ward": "9",
+   "neighborhood": "Glenville",
+   "in_foreclosure": true,
+   "score": 53,
+   "score_reasons": [
+    "Building Complaint Violation Notice",
+    "owner mails outside Cleveland (+8)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -76380,57 +76721,6 @@
    "score_reasons": [
     "Active Condemnation",
     "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:11701041",
-   "property_address": "1762 ALCOY RD",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44112",
-   "parcel": "11701041",
-   "owner_name": "AGENCY REALTY OH LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "10 BROADMAN PKWY, JERSEY CITY, NJ 07305",
-   "out_of_state_owner": true,
-   "lead_types": [
-    "Civil Ticket (Residents First)",
-    "Building Complaint Violation Notice"
-   ],
-   "open_records": 2,
-   "case_numbers": [
-    "CT26008489",
-    "V26045329"
-   ],
-   "cases_by_source": {
-    "civil_tickets": [
-     "CT26008489"
-    ],
-    "violation_notices": [
-     "V26045329"
-    ]
-   },
-   "violation_types": [
-    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;",
-    "Failure to Register"
-   ],
-   "description": "This rental property has not complied with the rental registration ordinance",
-   "oldest_open_days": 45,
-   "latest_date": "2026-10-20",
-   "total_fines": 0,
-   "ward": "10",
-   "neighborhood": "Euclid-Green",
-   "in_foreclosure": false,
-   "score": 50,
-   "score_reasons": [
-    "Civil Ticket (Residents First)",
-    "Building Complaint Violation Notice",
-    "2 open records (+5)",
-    "multiple enforcement types (+10)",
-    "owner mails out of state (+15)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -81194,57 +81484,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:11528062",
-   "property_address": "909 STEVENSON RD",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44110",
-   "parcel": "11528062",
-   "owner_name": "REESE ROADWAY SERVICES, LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "2602 EAST GLASS, BAKERSFIELD, CA 85042",
-   "out_of_state_owner": true,
-   "lead_types": [
-    "Civil Ticket (Residents First)",
-    "Building Complaint Violation Notice"
-   ],
-   "open_records": 2,
-   "case_numbers": [
-    "CT26011329",
-    "V26038076"
-   ],
-   "cases_by_source": {
-    "civil_tickets": [
-     "CT26011329"
-    ],
-    "violation_notices": [
-     "V26038076"
-    ]
-   },
-   "violation_types": [
-    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;",
-    "Failure to Register"
-   ],
-   "description": "This rental property has not complied with the rental registration ordinance",
-   "oldest_open_days": 58,
-   "latest_date": "2026-10-13",
-   "total_fines": 0,
-   "ward": "10",
-   "neighborhood": "Collinwood-Nottingham",
-   "in_foreclosure": false,
-   "score": 50,
-   "score_reasons": [
-    "Civil Ticket (Residents First)",
-    "Building Complaint Violation Notice",
-    "2 open records (+5)",
-    "multiple enforcement types (+10)",
-    "owner mails out of state (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:12712057",
    "property_address": "9120 BESSEMER AVE",
    "city": "CLEVELAND",
@@ -82216,6 +82455,92 @@
     "2 open records (+5)",
     "multiple enforcement types (+10)",
     "owner mails out of state (+15)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:01523155",
+   "property_address": "3804 W 38TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44109",
+   "parcel": "01523155",
+   "owner_name": "OSLIN, ROBERT A.",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "3804 W 38 ST, CLEVELAND, OH 44109",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Civil Ticket (Residents First)"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "CT26007911"
+   ],
+   "cases_by_source": {
+    "civil_tickets": [
+     "CT26007911"
+    ]
+   },
+   "violation_types": [
+    "369.18 Exterior Property Areas"
+   ],
+   "description": "Missing front steps & junk and debris on front & rear porch.",
+   "oldest_open_days": 59,
+   "latest_date": "2026-09-03",
+   "total_fines": 0,
+   "ward": "14",
+   "neighborhood": "Brooklyn Centre",
+   "in_foreclosure": true,
+   "score": 50,
+   "score_reasons": [
+    "Civil Ticket (Residents First)",
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
+   "lead_id": "P:00630007",
+   "property_address": "6805 CLARK AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44102",
+   "parcel": "00630007",
+   "owner_name": "SMITH, ANDRE",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "13415 PURITAS AVE, CLEVELAND, OH 44135",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Civil Ticket (Residents First)"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "CT26008175"
+   ],
+   "cases_by_source": {
+    "civil_tickets": [
+     "CT26008175"
+    ]
+   },
+   "violation_types": [
+    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;"
+   ],
+   "description": "This rental property has not complied with the rental registration ordinance",
+   "oldest_open_days": 45,
+   "latest_date": "2026-09-17",
+   "total_fines": 0,
+   "ward": "11",
+   "neighborhood": "West Boulevard",
+   "in_foreclosure": true,
+   "score": 50,
+   "score_reasons": [
+    "Civil Ticket (Residents First)",
+    "individual owner (+10)",
+    "also in foreclosure (+25)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-01"
@@ -101582,6 +101907,48 @@
    "last_seen": "2026-11-01"
   },
   {
+   "lead_id": "P:12723048",
+   "property_address": "9716 RAYMOND AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44104",
+   "parcel": "12723048",
+   "owner_name": "TRUE FREEDOM INVESTMENT GROUP LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "9716 RAYMOND AVE, CLEVELAND, OH 44104",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Civil Ticket (Residents First)"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "CT26008525"
+   ],
+   "cases_by_source": {
+    "civil_tickets": [
+     "CT26008525"
+    ]
+   },
+   "violation_types": [
+    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;"
+   ],
+   "description": "This rental property has not complied with the rental registration ordinance",
+   "oldest_open_days": 45,
+   "latest_date": "2026-09-17",
+   "total_fines": 0,
+   "ward": "6",
+   "neighborhood": "Kinsman",
+   "in_foreclosure": true,
+   "score": 40,
+   "score_reasons": [
+    "Civil Ticket (Residents First)",
+    "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-01"
+  },
+  {
    "lead_id": "P:12022008",
    "property_address": "1641 E 115 ST",
    "city": "CLEVELAND",
@@ -106460,48 +106827,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:00522138",
-   "property_address": "2092 W 98TH ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44102",
-   "parcel": "00522138",
-   "owner_name": "TOPSTONE INVESTMENT LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "P O BOX 1478, BLUE SPRINGS, MO 64013",
-   "out_of_state_owner": true,
-   "lead_types": [
-    "Building Complaint Violation Notice"
-   ],
-   "open_records": 1,
-   "case_numbers": [
-    "V26039319"
-   ],
-   "cases_by_source": {
-    "violation_notices": [
-     "V26039319"
-    ]
-   },
-   "violation_types": [
-    "Failure to Register"
-   ],
-   "description": "",
-   "oldest_open_days": 48,
-   "latest_date": "2026-09-14",
-   "total_fines": 0,
-   "ward": "11",
-   "neighborhood": "Cudell",
-   "in_foreclosure": false,
-   "score": 35,
-   "score_reasons": [
-    "Building Complaint Violation Notice",
-    "owner mails out of state (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:00517045",
    "property_address": "2124 W 105 ST",
    "city": "CLEVELAND",
@@ -107186,48 +107511,6 @@
    "total_fines": 0,
    "ward": "14",
    "neighborhood": "Brooklyn Centre",
-   "in_foreclosure": false,
-   "score": 35,
-   "score_reasons": [
-    "Building Complaint Violation Notice",
-    "owner mails out of state (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:00726005",
-   "property_address": "3104 ERIN AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44113",
-   "parcel": "00726005",
-   "owner_name": "TOPSTONE INVESTMENT LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "P O BOX 1478, BLUE SPRINGS, MO 64013",
-   "out_of_state_owner": true,
-   "lead_types": [
-    "Building Complaint Violation Notice"
-   ],
-   "open_records": 1,
-   "case_numbers": [
-    "V26039317"
-   ],
-   "cases_by_source": {
-    "violation_notices": [
-     "V26039317"
-    ]
-   },
-   "violation_types": [
-    "Failure to Register"
-   ],
-   "description": "",
-   "oldest_open_days": 48,
-   "latest_date": "2026-09-14",
-   "total_fines": 0,
-   "ward": "14",
-   "neighborhood": "Clark-Fulton",
    "in_foreclosure": false,
    "score": 35,
    "score_reasons": [
@@ -123598,49 +123881,6 @@
    "total_fines": 0,
    "ward": "8",
    "neighborhood": "Goodrich-Kirtland Pk",
-   "in_foreclosure": false,
-   "score": 33,
-   "score_reasons": [
-    "Civil Ticket (Residents First)",
-    "owner mails outside Cleveland (+8)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-11-01",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:11525009",
-   "property_address": "15810 HOLMES AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44110",
-   "parcel": "11525009",
-   "owner_name": "JACKSON, CLARISSA & RICKEY",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "12470 CAVES RD, CHESTERLAND, OH 44026",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Civil Ticket (Residents First)"
-   ],
-   "open_records": 1,
-   "case_numbers": [
-    "CT26011810"
-   ],
-   "cases_by_source": {
-    "civil_tickets": [
-     "CT26011810"
-    ]
-   },
-   "violation_types": [
-    "369.18 Exterior Property Areas"
-   ],
-   "description": "ABANDONED TRAILER PARKED IN THE PARKING LOT.",
-   "oldest_open_days": 6,
-   "latest_date": "2026-10-26",
-   "total_fines": 0,
-   "ward": "10",
-   "neighborhood": "Collinwood-Nottingham",
    "in_foreclosure": false,
    "score": 33,
    "score_reasons": [
@@ -153685,48 +153925,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:14208060",
-   "property_address": "4262 E 151ST ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44128",
-   "parcel": "14208060",
-   "owner_name": "SAARR PROPERTIES, LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "8224 PRITCHETT FARM LN, RALEIGH, NC 27606",
-   "out_of_state_owner": true,
-   "lead_types": [
-    "Civil Ticket (Residents First)"
-   ],
-   "open_records": 1,
-   "case_numbers": [
-    "CT26009468"
-   ],
-   "cases_by_source": {
-    "civil_tickets": [
-     "CT26009468"
-    ]
-   },
-   "violation_types": [
-    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;"
-   ],
-   "description": "Failure to register rental property",
-   "oldest_open_days": 38,
-   "latest_date": "2026-09-24",
-   "total_fines": 0,
-   "ward": "1",
-   "neighborhood": "Lee-Harvard",
-   "in_foreclosure": false,
-   "score": 30,
-   "score_reasons": [
-    "Civil Ticket (Residents First)",
-    "owner mails out of state (+15)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:13816022",
    "property_address": "4264 E 131ST ST",
    "city": "CLEVELAND",
@@ -166964,48 +167162,6 @@
    "description": "",
    "oldest_open_days": 46,
    "latest_date": "2026-09-16",
-   "total_fines": 0,
-   "ward": "9",
-   "neighborhood": "Glenville",
-   "in_foreclosure": false,
-   "score": 28,
-   "score_reasons": [
-    "Building Complaint Violation Notice",
-    "owner mails outside Cleveland (+8)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:10906014",
-   "property_address": "1109 E 97 ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44108",
-   "parcel": "10906014",
-   "owner_name": "GSD 3 LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "4901 TURNEY RD, GARFIELD HTS, OH 44125",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Building Complaint Violation Notice"
-   ],
-   "open_records": 1,
-   "case_numbers": [
-    "V26042352"
-   ],
-   "cases_by_source": {
-    "violation_notices": [
-     "V26042352"
-    ]
-   },
-   "violation_types": [
-    "Exterior Maintenance"
-   ],
-   "description": "",
-   "oldest_open_days": 26,
-   "latest_date": "2026-10-06",
    "total_fines": 0,
    "ward": "9",
    "neighborhood": "Glenville",
@@ -195804,48 +195960,6 @@
    "last_seen": "2026-11-01"
   },
   {
-   "lead_id": "P:01523155",
-   "property_address": "3804 W 38TH ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44109",
-   "parcel": "01523155",
-   "owner_name": "OSLIN, ROBERT A.",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "3804 W 38 ST, CLEVELAND, OH 44109",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Civil Ticket (Residents First)"
-   ],
-   "open_records": 1,
-   "case_numbers": [
-    "CT26007911"
-   ],
-   "cases_by_source": {
-    "civil_tickets": [
-     "CT26007911"
-    ]
-   },
-   "violation_types": [
-    "369.18 Exterior Property Areas"
-   ],
-   "description": "Missing front steps & junk and debris on front & rear porch.",
-   "oldest_open_days": 59,
-   "latest_date": "2026-09-03",
-   "total_fines": 0,
-   "ward": "14",
-   "neighborhood": "Brooklyn Centre",
-   "in_foreclosure": false,
-   "score": 25,
-   "score_reasons": [
-    "Civil Ticket (Residents First)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
    "lead_id": "P:01523157",
    "property_address": "3807 W 38TH ST",
    "city": "CLEVELAND",
@@ -202387,48 +202501,6 @@
    "total_fines": 0,
    "ward": "8",
    "neighborhood": "Hough",
-   "in_foreclosure": false,
-   "score": 25,
-   "score_reasons": [
-    "Civil Ticket (Residents First)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:00630007",
-   "property_address": "6805 CLARK AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44102",
-   "parcel": "00630007",
-   "owner_name": "SMITH, ANDRE",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "13415 PURITAS AVE, CLEVELAND, OH 44135",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Civil Ticket (Residents First)"
-   ],
-   "open_records": 1,
-   "case_numbers": [
-    "CT26008175"
-   ],
-   "cases_by_source": {
-    "civil_tickets": [
-     "CT26008175"
-    ]
-   },
-   "violation_types": [
-    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;"
-   ],
-   "description": "This rental property has not complied with the rental registration ordinance",
-   "oldest_open_days": 45,
-   "latest_date": "2026-09-17",
-   "total_fines": 0,
-   "ward": "11",
-   "neighborhood": "West Boulevard",
    "in_foreclosure": false,
    "score": 25,
    "score_reasons": [
@@ -254002,47 +254074,6 @@
    "total_fines": 0,
    "ward": "11",
    "neighborhood": "Edgewater",
-   "in_foreclosure": false,
-   "score": 15,
-   "score_reasons": [
-    "Civil Ticket (Residents First)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-01"
-  },
-  {
-   "lead_id": "P:12723048",
-   "property_address": "9716 RAYMOND AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44104",
-   "parcel": "12723048",
-   "owner_name": "TRUE FREEDOM INVESTMENT GROUP LLC",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "9716 RAYMOND AVE, CLEVELAND, OH 44104",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Civil Ticket (Residents First)"
-   ],
-   "open_records": 1,
-   "case_numbers": [
-    "CT26008525"
-   ],
-   "cases_by_source": {
-    "civil_tickets": [
-     "CT26008525"
-    ]
-   },
-   "violation_types": [
-    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;"
-   ],
-   "description": "This rental property has not complied with the rental registration ordinance",
-   "oldest_open_days": 45,
-   "latest_date": "2026-09-17",
-   "total_fines": 0,
-   "ward": "6",
-   "neighborhood": "Kinsman",
    "in_foreclosure": false,
    "score": 15,
    "score_reasons": [

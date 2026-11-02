@@ -2,7 +2,7 @@
 from datetime import date
 
 import config
-from normalize import is_entity, owner_class, property_key
+from normalize import address_key, is_entity, owner_class, property_key
 
 
 def _days_old(iso: str | None, today: date) -> int | None:
@@ -87,7 +87,11 @@ def build_leads(signals: list[dict], lookup, today: date, foreclosure_keys: set[
         else:
             reasons.append("owner not found")
 
-        fc = bool(foreclosure_keys and (f"P:{parcel}" in foreclosure_keys or key in foreclosure_keys))
+        fc = bool(foreclosure_keys and (
+            (parcel and f"P:{parcel}" in foreclosure_keys)
+            or key in foreclosure_keys
+            or f"A:{address_key(head['address'])}" in foreclosure_keys     # parcel missing/mismatched on the other side
+        ))
         if fc:
             score += 25
             reasons.append("also in foreclosure (+25)")

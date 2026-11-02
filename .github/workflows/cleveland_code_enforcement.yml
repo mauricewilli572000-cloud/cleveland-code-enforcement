@@ -43,8 +43,10 @@ jobs:
           elif [ "$(date -u +%u)" = "7" ]; then
             ARGS="--days 60"      # Sunday: full 60-day re-check after the weekly data refresh
           fi
+          # Cross-match with the Cuyahoga foreclosure leads (public repo). An unreadable feed is skipped, never fatal.
+          ARGS="$ARGS --foreclosure-source https://raw.githubusercontent.com/mauricewilli572000-cloud/franklin-foreclosure-scraper/main/dashboard/cuyahoga.json"
           if [ -f data/foreclosure_addresses.csv ]; then
-            ARGS="$ARGS --foreclosure-csv data/foreclosure_addresses.csv"
+            ARGS="$ARGS --foreclosure-source data/foreclosure_addresses.csv"
           fi
           python run_pipeline.py $ARGS
 

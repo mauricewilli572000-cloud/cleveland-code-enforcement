@@ -95,21 +95,50 @@ def collect_signals(raw_by_source: dict, since: date, include_closed: bool, incl
     return open_sigs, closed_keys_all - open_keys, stats
 
 
-def load_foreclosure_keys(path: Path | None) -> set[str]:
-    """Optional CSV of foreclosure properties (columns: parcel and/or property_address)."""
-    keys: set[str] = set()
-    if not path or not path.exists():
-        return keys
+def _add_foreclosure_row(keys: set[str], row: dict):
+    low = {str(k).lower().strip(): v for k, v in row.items() if k}
+    p = normalize.norm_parcel(low.get("parcel") or low.get("parcel_number") or low.get("ppn"))
+    a = (low.get("property_address") or low.get("prop_address") or low.get("address") or "")
+    if p:
+        keys.add(f"P:{p}")
+    if a:
+        keys.add(f"A:{normalize.address_key(normalize.split_address(a)[0])}")
+
+
+def load_foreclosure_keys(sources) -> set[str]:
+    """Keys (P:<parcel>, A:<address key>) of foreclosure properties.
+
+    Each source is a local .csv/.json path or an http(s) URL of a .json feed such as the
+    Cuyahoga foreclosure scraper's dashboard/cuyahoga.json ({"leads": [...]}). A source that
+    can't be read is logged and skipped; it never fails the run.
+    """
     import csv
-    with open(path, newline="", encoding="utf-8-sig") as fh:
-        for row in csv.DictReader(fh):
-            low = {k.lower().strip(): v for k, v in row.items() if k}
-            p = normalize.norm_parcel(low.get("parcel") or low.get("parcel_number") or low.get("ppn"))
-            a = low.get("property_address") or low.get("address") or ""
-            if p:
-                keys.add(f"P:{p}")
-            if a:
-                keys.add(f"A:{normalize.address_key(a)}")
+    import requests
+    keys: set[str] = set()
+    if not sources:
+        return keys
+    if isinstance(sources, (str, Path)):
+        sources = [sources]
+    for src in sources:
+        before = len(keys)
+        try:
+            s = str(src)
+            if s.startswith(("http://", "https://")):
+                r = requests.get(s, timeout=config.REQUEST_TIMEOUT, headers={"User-Agent": config.USER_AGENT})
+                r.raise_for_status()
+                data = r.json()
+            elif s.lower().endswith(".json"):
+                data = json.loads(Path(s).read_text(encoding="utf-8"))
+            else:
+                with open(s, newline="", encoding="utf-8-sig") as fh:
+                    data = list(csv.DictReader(fh))
+            rows = data if isinstance(data, list) else (data.get("leads") or data.get("records") or [])
+            for row in rows:
+                if isinstance(row, dict):
+                    _add_foreclosure_row(keys, row)
+            log.info("foreclosure source %s: %d rows, %d new keys", s[-60:], len(rows), len(keys) - before)
+        except Exception as exc:
+            log.warning("foreclosure source %s could not be read (%s); skipping it", src, exc)
     return keys
 
 
@@ -120,7 +149,10 @@ def main(argv=None) -> int:
     ap.add_argument("--include-closed", action="store_true")
     ap.add_argument("--include-units", action="store_true", help="keep apartments / unit addresses")
     ap.add_argument("--parcel-csv", type=Path, help="local parcel/owner CSV to use for owners")
-    ap.add_argument("--foreclosure-csv", type=Path, help="CSV of foreclosure parcels/addresses for cross-match")
+    ap.add_argument("--foreclosure-csv", "--foreclosure-source", dest="foreclosure_sources", action="append",
+                    metavar="PATH_OR_URL",
+                    help="foreclosure leads to cross-match (+25 score): a .csv/.json path or a URL of a .json feed; "
+                         "repeat the flag for several sources")
     ap.add_argument("--include-public", action="store_true",
                     help="keep properties owned by the City, County, land bank or housing authority")
     ap.add_argument("--no-enrich", action="store_true", help="skip owner lookup")
@@ -177,7 +209,10 @@ def main(argv=None) -> int:
             lookup.load_from_service(client, [(s["parcel"], s["address"]) for s in signals])
         log.info("owner records loaded: %d", len(lookup))
 
-    leads = scoring.build_leads(signals, lookup, today, load_foreclosure_keys(args.foreclosure_csv))
+    fc_keys = load_foreclosure_keys(args.foreclosure_sources)
+    leads = scoring.build_leads(signals, lookup, today, fc_keys)
+    if fc_keys:
+        log.info("foreclosure cross-match: %d leads also in foreclosure", sum(1 for l in leads if l["in_foreclosure"]))
     if not args.include_public:
         gov = {l["lead_id"] for l in leads if l["owner_class"] == "government"}
         if gov:
