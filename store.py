@@ -2,6 +2,7 @@
 import csv
 import json
 import re
+import shutil
 from datetime import date, datetime, timezone
 
 import config
@@ -121,9 +122,43 @@ def export_ghl(state: dict, min_score: int = 0):
                 "; ".join(l["score_reasons"]), l["added_date"], tags(l),
                 l["owner_name"],
             ])
+    # GitHub Pages serves only /docs, so publish a copy for the dashboard's "Download CSV" link
+    config.DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(config.GHL_CSV, config.DOCS_CSV)
 
 
 def export_dashboard(state: dict):
     config.DOCS_DIR.mkdir(parents=True, exist_ok=True)
     rows = sorted(state["leads"].values(), key=lambda l: -l["score"])
     config.DASHBOARD_JSON.write_text(json.dumps({"meta": state["meta"], "leads": rows}, indent=1))
+
+
+FEED_FIELDS = [
+    "lead_id", "property_address", "zip", "parcel", "owner_name", "owner_class", "mailing_address",
+    "out_of_state_owner", "lead_types", "open_records", "oldest_open_days", "latest_date", "added_date",
+    "neighborhood", "ward", "in_foreclosure", "score", "score_reasons",
+]
+
+
+def export_feed(state: dict):
+    """Slim feed for the combined county dashboard: only leads scoring FEED_MIN_SCORE+, trimmed fields,
+    compact JSON (the full file is 5+ MB and the dashboard draws every row it receives)."""
+    config.DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    rows = sorted(state["leads"].values(), key=lambda l: -l["score"])
+    keep = [l for l in rows if l["score"] >= config.FEED_MIN_SCORE]
+    feed = []
+    for l in keep:
+        r = {k: l.get(k) for k in FEED_FIELDS}
+        r["case_numbers"] = (l.get("case_numbers") or [])[:10]
+        r["violation_types"] = (l.get("violation_types") or [])[:4]
+        feed.append(r)
+    updated = state.get("meta", {}).get("updated_utc") or ""
+    meta = {
+        "updated_utc": updated,
+        "lead_count": len(rows),                 # all leads in the store
+        "feed_count": len(feed),                 # leads in this feed
+        "min_score": config.FEED_MIN_SCORE,
+        "with_mailing": sum(1 for l in feed if l.get("mailing_address")),
+        "new_count": sum(1 for l in feed if l.get("added_date") and l["added_date"] == updated[:10]),
+    }
+    config.FEED_JSON.write_text(json.dumps({"meta": meta, "leads": feed}, separators=(",", ":")))

@@ -78,6 +78,8 @@ def env(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "RECORDS_JSON", data / "records.json")
     monkeypatch.setattr(config, "GHL_CSV", data / "ghl.csv")
     monkeypatch.setattr(config, "DASHBOARD_JSON", docs / "dash.json")
+    monkeypatch.setattr(config, "FEED_JSON", docs / "feed.json")
+    monkeypatch.setattr(config, "DOCS_CSV", docs / "ghl_copy.csv")
     monkeypatch.setattr(config, "FIELD_OVERRIDES", data / "field_overrides.json")
     monkeypatch.setattr(config, "SERVICE_URL_CACHE", data / "service_urls.json")
     fx = tmp_path / "fx"
@@ -262,6 +264,17 @@ def test_exports(env):
     assert list(rows[0].keys())[-1] == "Owner Full Name"      # appended last: existing GHL mappings unchanged
     dash = json.loads(config.DASHBOARD_JSON.read_text())
     assert dash["meta"]["lead_count"] == 2
+
+
+def test_dashboard_feed_and_published_csv(env):
+    run(env)
+    feed = json.loads(config.FEED_JSON.read_text())
+    assert feed["meta"]["feed_count"] == len(feed["leads"]) and feed["meta"]["lead_count"] == 2
+    assert all(l["score"] >= config.FEED_MIN_SCORE for l in feed["leads"])
+    assert feed["leads"][0]["score"] >= feed["leads"][-1]["score"]                 # sorted best first
+    assert {"lead_id", "property_address", "owner_name", "mailing_address", "score_reasons"} <= set(feed["leads"][0])
+    assert "description" not in feed["leads"][0]                                    # slim: no long text fields
+    assert config.DOCS_CSV.read_bytes() == config.GHL_CSV.read_bytes()             # CSV published next to the page
 
 
 def test_include_flags(env):

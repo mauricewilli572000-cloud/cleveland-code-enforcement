@@ -18,6 +18,10 @@ FIXTURE_DIR = ROOT / "tests" / "fixtures"
 RECORDS_JSON = DATA_DIR / "records.json"
 GHL_CSV = DATA_DIR / "ghl_cleveland_code_enforcement.csv"
 DASHBOARD_JSON = DOCS_DIR / "cleveland_code_enforcement.json"
+# Published for the combined county dashboard (a tab on the foreclosure dashboard reads these by URL):
+FEED_JSON = DOCS_DIR / "cleveland_feed.json"             # slim: only leads scoring FEED_MIN_SCORE+
+DOCS_CSV = DOCS_DIR / "ghl_cleveland_code_enforcement.csv"   # GitHub Pages only serves /docs, so copy the CSV here
+FEED_MIN_SCORE = 40
 SERVICE_URL_CACHE = DATA_DIR / "service_urls.json"      # written by discover_cleveland.py
 FIELD_OVERRIDES = DATA_DIR / "field_overrides.json"     # optional manual role -> field name map
 

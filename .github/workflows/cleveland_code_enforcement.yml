@@ -54,6 +54,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/records.json data/ghl_cleveland_code_enforcement.csv docs/cleveland_code_enforcement.json
+          git add data/records.json data/ghl_cleveland_code_enforcement.csv docs/cleveland_code_enforcement.json docs/cleveland_feed.json docs/ghl_cleveland_code_enforcement.csv
           git diff --cached --quiet || git commit -m "Cleveland code enforcement: nightly update"
           git push

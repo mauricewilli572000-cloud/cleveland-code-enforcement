@@ -224,6 +224,7 @@ def main(argv=None) -> int:
     store.save(state)
     store.export_ghl(state, args.min_score)
     store.export_dashboard(state)
+    store.export_feed(state)
 
     with_owner = sum(1 for l in state["leads"].values() if l["owner_name"])
     log.info("done: %d leads in store (%d with owner), %d new/updated this run, %d closed removed",
