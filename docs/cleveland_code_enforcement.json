@@ -1,7 +1,7 @@
 {
  "meta": {
-  "updated_utc": "2026-11-11T05:21:23+00:00",
-  "lead_count": 6356
+  "updated_utc": "2026-11-11T05:23:30+00:00",
+  "lead_count": 6378
  },
  "leads": [
   {
@@ -13629,6 +13629,50 @@
     "open > 180 days (+15)",
     "owner not found",
     "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:4541 174",
+   "property_address": "4541 W 174TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "TAPANG, GABRIEL",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "161 BELLERIVE DR, EAGLE POINT, OR 97524",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000587"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000587"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Tapang, Gabriel. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 288,
+   "latest_date": "2026-01-27",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 75,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner mails out of state (+15)",
+    "individual owner (+10)"
    ],
    "added_date": "2026-11-11",
    "last_seen": "2026-11-11"
@@ -28055,7 +28099,7 @@
   },
   {
    "lead_id": "A:7806 LAWN",
-   "property_address": "7806 LAWN AVENUE",
+   "property_address": "7806 LAWN AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -50038,7 +50082,7 @@
   },
   {
    "lead_id": "A:11826 MCGOWAN",
-   "property_address": "11826 MCGOWAN AVENUE",
+   "property_address": "11826 MCGOWAN AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -50309,6 +50353,144 @@
    "description": "Defendant: Garcia Property Group II Inc. Last event: Housing Criminal Arraignment",
    "oldest_open_days": 273,
    "latest_date": "2026-02-11",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 65,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner mails out of state (+15)"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:3343 95",
+   "property_address": "3343 W 95TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 4,
+   "case_numbers": [
+    "2026-CRB-001406",
+    "2026-CRB-001407",
+    "2026-CRB-001408",
+    "2026-CRB-001409"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-001406",
+     "2026-CRB-001407",
+     "2026-CRB-001408",
+     "2026-CRB-001409"
+    ]
+   },
+   "violation_types": [
+    "10/1/3101(e) Maintenance Exterior Property Area",
+    "369.08 Rubbish And Garbage Disposal",
+    "369.18 Exterior Property Areas"
+   ],
+   "description": "Defendant: Calvey, Patricia. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 261,
+   "latest_date": "2026-02-23",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 65,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "4 open records (+15)",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:3905 18",
+   "property_address": "3905 W 18TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "TOPSTONE INVESTMENTS, LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "P O BOX 1478, BLUE SPRINGS, MO 64013",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-001404"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-001404"
+    ]
+   },
+   "violation_types": [
+    "10/1/3101(e) ORG Maintenance Exterior Property Area"
+   ],
+   "description": "Defendant: Topstone Investments LLC. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 261,
+   "latest_date": "2026-02-23",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 65,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner mails out of state (+15)"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:4139 74",
+   "property_address": "4139 E 74TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "POOL ENTERPRISES GROUPS LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "12131 113TH AVE #201, KIRKLAND, WA 98034",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000595"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000595"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Ware, Aklia. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 288,
+   "latest_date": "2026-01-27",
    "total_fines": 0,
    "ward": "",
    "neighborhood": "",
@@ -60819,7 +61001,7 @@
   },
   {
    "lead_id": "A:4507 FENWICK",
-   "property_address": "4507 FENWICK AVENUE",
+   "property_address": "4507 FENWICK AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -60867,7 +61049,7 @@
   },
   {
    "lead_id": "A:6501-5 FLEET",
-   "property_address": "6501-5 FLEET AVENUE",
+   "property_address": "6501-5 FLEET AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -60938,6 +61120,49 @@
    "description": "Defendant: Torres, Raul. Last event: Housing Criminal Arraignment",
    "oldest_open_days": 279,
    "latest_date": "2026-02-05",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 60,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "individual owner (+10)"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:2291 6",
+   "property_address": "2291 W 6TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "CASS, DOLORES",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "2291 W 6 ST, CLEVELAND, OH 44113",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000713"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000713"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Cass, Dolores. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 285,
+   "latest_date": "2026-01-30",
    "total_fines": 0,
    "ward": "",
    "neighborhood": "",
@@ -62892,7 +63117,7 @@
   },
   {
    "lead_id": "A:9511 MADISON",
-   "property_address": "9511 MADISON AVENUE",
+   "property_address": "9511 MADISON AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -62920,6 +63145,49 @@
    "description": "Defendant: Qilin Group LLC. Last event: Housing Criminal Arraignment",
    "oldest_open_days": 287,
    "latest_date": "2026-01-28",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 58,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner mails outside Cleveland (+8)"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:3195 116",
+   "property_address": "3195 W 116TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "BBNC INVESTMENTS LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "3070 BRADLEY RD, WESTLAKE, OH 44145",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000546"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000546"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Dieckhoner, Adrienne. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 292,
+   "latest_date": "2026-01-23",
    "total_fines": 0,
    "ward": "",
    "neighborhood": "",
@@ -75124,7 +75392,7 @@
   },
   {
    "lead_id": "A:11302 GLENBORO",
-   "property_address": "11302 GLENBORO DRIVE",
+   "property_address": "11302 GLENBORO DR",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -75170,7 +75438,7 @@
   },
   {
    "lead_id": "A:13216 HARVARD",
-   "property_address": "13216 HARVARD AVENUE",
+   "property_address": "13216 HARVARD AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -75216,7 +75484,7 @@
   },
   {
    "lead_id": "A:1758 ARABELLA",
-   "property_address": "1758 ARABELLA ROAD",
+   "property_address": "1758 ARABELLA RD",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -75354,7 +75622,7 @@
   },
   {
    "lead_id": "A:3371 MARTIN LUTHER KING JR",
-   "property_address": "3371 MARTIN LUTHER KING JR DRIVE",
+   "property_address": "3371 MARTIN LUTHER KING JR DR",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -75492,7 +75760,7 @@
   },
   {
    "lead_id": "A:3816 ARNOLD",
-   "property_address": "3816 ARNOLD COURT",
+   "property_address": "3816 ARNOLD CT",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -86223,7 +86491,7 @@
   },
   {
    "lead_id": "A:11712 ABLEWHITE",
-   "property_address": "11712 ABLEWHITE AVENUE",
+   "property_address": "11712 ABLEWHITE AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -86309,7 +86577,7 @@
   },
   {
    "lead_id": "A:1231 MAIN",
-   "property_address": "1231 MAIN AVENUE",
+   "property_address": "1231 MAIN AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -86438,7 +86706,7 @@
   },
   {
    "lead_id": "A:13117 WILTON",
-   "property_address": "13117 WILTON AVENUE",
+   "property_address": "13117 WILTON AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -86782,7 +87050,7 @@
   },
   {
    "lead_id": "A:14407 COIT",
-   "property_address": "14407 COIT ROAD",
+   "property_address": "14407 COIT RD",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -86868,7 +87136,7 @@
   },
   {
    "lead_id": "A:16321 TELFAIR",
-   "property_address": "16321 TELFAIR AVENUE",
+   "property_address": "16321 TELFAIR AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -86911,7 +87179,7 @@
   },
   {
    "lead_id": "A:16518 BILTMORE",
-   "property_address": "16518 BILTMORE AVENUE",
+   "property_address": "16518 BILTMORE AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -87040,7 +87308,7 @@
   },
   {
    "lead_id": "A:18302 PURITAS",
-   "property_address": "18302 PURITAS AVENUE",
+   "property_address": "18302 PURITAS AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -87083,7 +87351,7 @@
   },
   {
    "lead_id": "A:19513 CHEROKEE",
-   "property_address": "19513 CHEROKEE AVENUE",
+   "property_address": "19513 CHEROKEE AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -87255,7 +87523,7 @@
   },
   {
    "lead_id": "A:21 BROOKFIELD",
-   "property_address": "21 BROOKFIELD AVENUE",
+   "property_address": "21 BROOKFIELD AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -87685,7 +87953,7 @@
   },
   {
    "lead_id": "A:2818 CHURCH",
-   "property_address": "2818 CHURCH AVENUE",
+   "property_address": "2818 CHURCH AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -87986,7 +88254,7 @@
   },
   {
    "lead_id": "A:3339 MARTIN LUTHER KING JR",
-   "property_address": "3339 MARTIN LUTHER KING JR DRIVE",
+   "property_address": "3339 MARTIN LUTHER KING JR DR",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -88115,7 +88383,7 @@
   },
   {
    "lead_id": "A:3413 MARTIN LUTHER KING JR",
-   "property_address": "3413 MARTIN LUTHER KING JR DRIVE",
+   "property_address": "3413 MARTIN LUTHER KING JR DR",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -88717,7 +88985,7 @@
   },
   {
    "lead_id": "A:4180 PEARL",
-   "property_address": "4180 PEARL ROAD",
+   "property_address": "4180 PEARL RD",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -89147,7 +89415,7 @@
   },
   {
    "lead_id": "A:5417 FLEET",
-   "property_address": "5417 FLEET AVENUE",
+   "property_address": "5417 FLEET AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -89275,7 +89543,7 @@
   },
   {
    "lead_id": "A:5801 STORER",
-   "property_address": "5801 STORER PARKWAY",
+   "property_address": "5801 STORER PKWY",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -89361,7 +89629,7 @@
   },
   {
    "lead_id": "A:6508 HARVARD",
-   "property_address": "6508 HARVARD AVENUE",
+   "property_address": "6508 HARVARD AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -89576,7 +89844,7 @@
   },
   {
    "lead_id": "A:7301 BESSEMER",
-   "property_address": "7301 BESSEMER AVENUE",
+   "property_address": "7301 BESSEMER AVE",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -89920,7 +90188,7 @@
   },
   {
    "lead_id": "A:843 PAXTON",
-   "property_address": "843 PAXTON ROAD",
+   "property_address": "843 PAXTON RD",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -90006,7 +90274,7 @@
   },
   {
    "lead_id": "A:886 STEVENSON",
-   "property_address": "886 STEVENSON ROAD",
+   "property_address": "886 STEVENSON RD",
    "city": "CLEVELAND",
    "state": "OH",
    "zip": "",
@@ -90292,6 +90560,694 @@
    "description": "Defendant: Thomas, Steven C, Sr.. Last event: Housing Criminal Arraignment",
    "oldest_open_days": 279,
    "latest_date": "2026-02-05",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:12534",
+   "property_address": "12534 N RD",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000588"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000588"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Baez, Jacqueline. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 288,
+   "latest_date": "2026-01-27",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:1363 95",
+   "property_address": "1363 E 95TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-001207"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-001207"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) ORG No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued; 3103.25(e) ORG No Pers"
+   ],
+   "description": "Defendant: Summerhouse Legacy LLC. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 267,
+   "latest_date": "2026-02-17",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:1701 12",
+   "property_address": "1701 E 12TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000707"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000707"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) ORG No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued; 3103.25(e) ORG No Pers"
+   ],
+   "description": "Defendant: Reserve Square Apartments LLC. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 285,
+   "latest_date": "2026-01-30",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:2020 81",
+   "property_address": "2020 W 81ST ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000727"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000727"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Fadumo, Mohammed. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 285,
+   "latest_date": "2026-01-30",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:2088 81",
+   "property_address": "2088 W 81ST ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000721"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000721"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) ORG No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued; 3103.25(e) ORG No Pers"
+   ],
+   "description": "Defendant: Ohio City Investments LLC. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 285,
+   "latest_date": "2026-01-30",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:2305 83",
+   "property_address": "2305 E 83RD ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000665"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000665"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Miller, Gladys. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 286,
+   "latest_date": "2026-01-29",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:2886 25",
+   "property_address": "2886 W 25TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000685"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000685"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Castro, Norma. Last event: Journal Entry Note:",
+   "oldest_open_days": 286,
+   "latest_date": "2026-01-29",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:3271 116",
+   "property_address": "3271 E 116TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000705"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000705"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Ruthledge, Barbara. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 285,
+   "latest_date": "2026-01-30",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:3365 117",
+   "property_address": "3365 W 117TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000773"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000773"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Yassen, Mahmoud. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 282,
+   "latest_date": "2026-02-02",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:3545 116",
+   "property_address": "3545 E 116TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000688"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000688"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) ORG No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued; 3103.25(e) ORG No Pers"
+   ],
+   "description": "Defendant: Delta Waters Home LLC. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 286,
+   "latest_date": "2026-01-29",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:3895 18",
+   "property_address": "3895 W 18TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-001405"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-001405"
+    ]
+   },
+   "violation_types": [
+    "10/1/3101(e) Maintenance Exterior Property Area"
+   ],
+   "description": "Defendant: Estep, Gregory. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 261,
+   "latest_date": "2026-02-23",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:3901 18",
+   "property_address": "3901 W 18TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-001290"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-001290"
+    ]
+   },
+   "violation_types": [
+    "369.18 Exterior Property Areas"
+   ],
+   "description": "Defendant: Rivera-Robles, Karin. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 265,
+   "latest_date": "2026-02-19",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:3992 144",
+   "property_address": "3992 E 144TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000592"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000592"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: McClean, Cornelius. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 288,
+   "latest_date": "2026-01-27",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:4106 141",
+   "property_address": "4106 E 141ST ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000661"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000661"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Rand, Ulyess. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 286,
+   "latest_date": "2026-01-29",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:480 147",
+   "property_address": "480 E 147TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-001287"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-001287"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) ORG No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued; 3103.25(e) ORG No Pers"
+   ],
+   "description": "Defendant: Riparian VPC Ohio SFR Portfolio LLC. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 265,
+   "latest_date": "2026-02-19",
+   "total_fines": 0,
+   "ward": "",
+   "neighborhood": "",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Housing Court Criminal Case",
+    "open > 180 days (+15)",
+    "owner not found"
+   ],
+   "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "A:557 112",
+   "property_address": "557 E 112TH ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "",
+   "parcel": "",
+   "owner_name": "",
+   "owner_is_entity": false,
+   "owner_class": "",
+   "mailing_address": "",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Housing Court Criminal Case"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "2026-CRB-000668"
+   ],
+   "cases_by_source": {
+    "housing_criminal": [
+     "2026-CRB-000668"
+    ]
+   },
+   "violation_types": [
+    "3103.25(e) No Person Shall Refuse, Neglect or Fail to Comply With Any Stop Work Order Issued Under t; 3103.25(e) No Pers"
+   ],
+   "description": "Defendant: Pritchett, Calvin. Last event: Housing Criminal Arraignment",
+   "oldest_open_days": 286,
+   "latest_date": "2026-01-29",
    "total_fines": 0,
    "ward": "",
    "neighborhood": "",
