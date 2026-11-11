@@ -365,3 +365,9 @@ def test_housing_court_criminal_cases():
     assert s["address"].upper().startswith("14809 ROCHELLE") and s["date"] == "2026-01-13" and not s["closed"]
     assert "Zada, Ahmad" in s["description"] and "(12/26/2025)" not in s["type"]
     assert next(x for x in sigs if x["case_number"] == "2026-CRB-000400")["closed"]
+
+
+def test_housing_court_address_style():
+    import housing_court
+    assert housing_court.county_style("7806 Lawn Avenue") == "7806 LAWN AVE"
+    assert housing_court.county_style("1437 W 85Th St") == "1437 W 85TH ST"

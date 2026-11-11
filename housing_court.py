@@ -18,6 +18,21 @@ log = logging.getLogger(__name__)
 SOURCE_KEY = "housing_criminal"
 
 
+_SUFFIXES = {"AVENUE": "AVE", "AV": "AVE", "STREET": "ST", "ROAD": "RD", "DRIVE": "DR", "BOULEVARD": "BLVD",
+             "LANE": "LN", "COURT": "CT", "PLACE": "PL", "PARKWAY": "PKWY", "CIRCLE": "CIR", "TERRACE": "TER"}
+_DIRS = {"NORTH": "N", "SOUTH": "S", "EAST": "E", "WEST": "W"}
+
+
+def county_style(addr: str) -> str:
+    """'7806 Lawn Avenue' -> '7806 LAWN AVE', '1437 W 85Th St' -> '1437 W 85TH ST' (how the parcel table writes it)."""
+    toks = re.sub(r"[.,]", " ", str(addr or "")).upper().split()
+    if len(toks) > 2:
+        toks[-1] = _SUFFIXES.get(toks[-1], toks[-1])
+    if len(toks) > 2:
+        toks[1] = _DIRS.get(toks[1], toks[1])
+    return " ".join(toks)
+
+
 def _iso(v) -> str:
     if isinstance(v, datetime):
         return v.date().isoformat()
@@ -53,6 +68,7 @@ def to_signals(rows: list[dict]) -> list[dict]:
     out = []
     for num, c in cases.items():
         address, zipc = split_address(c["address"])
+        address = county_style(address)
         if not address:
             continue
         r = c["row"]
