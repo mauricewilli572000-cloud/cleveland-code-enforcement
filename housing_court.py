@@ -119,29 +119,36 @@ def resolve_parcels(client, lookup, signals: list[dict], parcel_source: dict) ->
     import fields
     from normalize import norm_parcel
     url = client.resolve_layer_url(parcel_source["item_id"], parcel_source["layer"])
-    found = 0
+    names = [f["name"] for f in client.layer_info(url).get("fields", [])]
+    site = fields.detect_field(names, "parcel_site", parcel_source["name"])
+    if not site:
+        log.warning("%s: no site-address field on %s; skipping parcel match", SOURCE_KEY, parcel_source["name"])
+        return 0
+    found = failed = 0
     for s in signals:
         if s["source"] != SOURCE_KEY or s["parcel"]:
             continue
         num, street = street_parts(s["address"])
         if not num or not street:
             continue
-        where = f"par_addr = '{num}' AND UPPER(par_street) LIKE '%{street.replace(chr(39), chr(39) * 2)}%'"
+        # e.g. UPPER(par_addr_all) LIKE '12109 %LENACRAVE%'  (site field reads '12109  LENACRAVE AVE, CLEVELAND, OH, 44105')
+        pattern = f"{num} %{street}%".replace("'", "''")
         try:
-            rows = client.query(url, where)
+            rows = client.query(url, f"UPPER({site}) LIKE '{pattern}'")
         except Exception as exc:  # noqa: BLE001
-            log.warning("court-case parcel query failed for %s: %s", s["address"], exc)
+            failed += 1
+            if failed == 1:
+                log.warning("court-case parcel query failed (%s): %s", s["address"], exc)
             continue
         idx0 = fields.build_index(rows[0]) if rows else {}
         pins = {norm_parcel(fields.pick(r, "parcel_key", parcel_source["name"], idx0)) for r in rows}
+        pins.discard("")
         if len(pins) != 1:          # no match, or several different parcels (ambiguous) - skip
             continue
-        rows = rows[:1]
-        if rows:
-            lookup.add_rows(rows, parcel_source["name"])
-            pk = norm_parcel(fields.pick(rows[0], "parcel_key", parcel_source["name"], fields.build_index(rows[0])))
-            if pk:
-                s["parcel"] = pk
-                found += 1
+        lookup.add_rows(rows[:1], parcel_source["name"])
+        s["parcel"] = pins.pop()
+        found += 1
+    if failed:
+        log.warning("%s: %d parcel queries failed", SOURCE_KEY, failed)
     log.info("%s: parcel found for %d court cases", SOURCE_KEY, found)
     return found
