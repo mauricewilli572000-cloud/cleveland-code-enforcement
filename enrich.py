@@ -75,7 +75,7 @@ class OwnerLookup:
     # -- live service ----------------------------------------------------------
     MAX_ADDRESS_LOOKUPS = 300   # address fallback is slow; parcel match is the main path
 
-    def load_from_service(self, client, pairs: list[tuple[str, str]]):
+    def load_from_service(self, client, pairs: list[tuple[str, str]], priority: set[str] | None = None):
         """Query parcel layers only for the parcels we need; fall back to address
         only for properties that still have no owner after the parcel match.
 
@@ -102,10 +102,11 @@ class OwnerLookup:
                     except Exception as exc:
                         log.warning("parcel query failed (%s): %s", ps["name"], exc)
                         break
+            pri = priority or set()
             unresolved = sorted({
                 a for p, a in pairs
                 if a and not self.lookup(p, a)          # no owner by parcel OR address yet
-            })
+            }, key=lambda a: (a not in pri, a))         # address-only sources (court cases) first
             if len(unresolved) > self.MAX_ADDRESS_LOOKUPS:
                 log.warning("%d properties still have no owner after parcel match; address-matching only the first %d",
                             len(unresolved), self.MAX_ADDRESS_LOOKUPS)

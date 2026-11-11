@@ -225,7 +225,8 @@ def main(argv=None) -> int:
             if pf.exists():
                 lookup.add_rows(json.loads(pf.read_text()))
         elif client:
-            lookup.load_from_service(client, [(s["parcel"], s["address"]) for s in signals])
+            lookup.load_from_service(client, [(s["parcel"], s["address"]) for s in signals],
+                                     priority={s["address"] for s in signals if s["source"] == "housing_criminal"})
         log.info("owner records loaded: %d", len(lookup))
 
     fc_keys = load_foreclosure_keys(args.foreclosure_sources)
