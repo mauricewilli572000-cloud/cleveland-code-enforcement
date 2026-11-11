@@ -244,6 +244,12 @@ def main(argv=None) -> int:
             log.info("dropping %d city/county/land-bank-owned properties (--include-public keeps them)", len(gov))
         leads = [l for l in leads if l["lead_id"] not in gov]
         closed_keys = closed_keys | gov            # also removes them if stored earlier
+    # The court report lists every case filed this year, so a stored lead built only from
+    # court cases that isn't in this run's results is stale (e.g. re-keyed from address to parcel).
+    if court_keys and "housing_criminal" not in failures:
+        current_ids = {l["lead_id"] for l in leads}
+        closed_keys |= {k for k, v in state.get("leads", {}).items()
+                        if set(v.get("cases_by_source", {})) <= set(court_keys) and k not in current_ids}
     removed = len(closed_keys & set(state.get("leads", {})))
     state = store.merge(state, leads, closed_keys, today)
     store.save(state)
