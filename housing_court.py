@@ -92,3 +92,56 @@ def to_signals(rows: list[dict]) -> list[dict]:
             "neighborhood": "",
         })
     return out
+
+
+_SUFFIX_WORDS = set(_SUFFIXES) | set(_SUFFIXES.values()) | {"WAY", "RUN", "PIKE", "TRL", "HWY", "SQ", "ROW"}
+
+
+def street_parts(addr: str) -> tuple[str, str]:
+    """'1437 W 85TH ST' -> ('1437', '85TH'); '12109 LENACRAVE AVE' -> ('12109', 'LENACRAVE')."""
+    toks = county_style(addr).split()
+    if len(toks) < 2 or not re.match(r"^\d+", toks[0]):
+        return "", ""
+    num, rest = re.match(r"^(\d+)", toks[0]).group(1), toks[1:]
+    if rest and rest[0] in _DIRS.values() and len(rest) > 1:
+        rest = rest[1:]
+    if len(rest) > 1 and rest[-1] in _SUFFIX_WORDS:
+        rest = rest[:-1]
+    return num, " ".join(rest)
+
+
+def resolve_parcels(client, lookup, signals: list[dict], parcel_source: dict) -> int:
+    """Give court cases (address only) a parcel number + owner from the county parcel table.
+
+    One small query per case: house number + street name. Matching a parcel lets the case
+    group with the property's other Cleveland signals (which are keyed by parcel).
+    """
+    import fields
+    from normalize import norm_parcel
+    url = client.resolve_layer_url(parcel_source["item_id"], parcel_source["layer"])
+    found = 0
+    for s in signals:
+        if s["source"] != SOURCE_KEY or s["parcel"]:
+            continue
+        num, street = street_parts(s["address"])
+        if not num or not street:
+            continue
+        where = f"par_addr = '{num}' AND UPPER(par_street) LIKE '%{street.replace(chr(39), chr(39) * 2)}%'"
+        try:
+            rows = client.query(url, where)
+        except Exception as exc:  # noqa: BLE001
+            log.warning("court-case parcel query failed for %s: %s", s["address"], exc)
+            continue
+        idx0 = fields.build_index(rows[0]) if rows else {}
+        pins = {norm_parcel(fields.pick(r, "parcel_key", parcel_source["name"], idx0)) for r in rows}
+        if len(pins) != 1:          # no match, or several different parcels (ambiguous) - skip
+            continue
+        rows = rows[:1]
+        if rows:
+            lookup.add_rows(rows, parcel_source["name"])
+            pk = norm_parcel(fields.pick(rows[0], "parcel_key", parcel_source["name"], fields.build_index(rows[0])))
+            if pk:
+                s["parcel"] = pk
+                found += 1
+    log.info("%s: parcel found for %d court cases", SOURCE_KEY, found)
+    return found

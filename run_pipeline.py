@@ -225,6 +225,11 @@ def main(argv=None) -> int:
             if pf.exists():
                 lookup.add_rows(json.loads(pf.read_text()))
         elif client:
+            if court_keys:
+                try:
+                    housing_court.resolve_parcels(client, lookup, signals, config.PARCEL_SOURCES[0])
+                except Exception as exc:  # noqa: BLE001
+                    log.warning("court-case parcel lookup skipped: %s", exc)
             lookup.load_from_service(client, [(s["parcel"], s["address"]) for s in signals],
                                      priority={s["address"] for s in signals if s["source"] == "housing_criminal"})
         log.info("owner records loaded: %d", len(lookup))

@@ -371,3 +371,9 @@ def test_housing_court_address_style():
     import housing_court
     assert housing_court.county_style("7806 Lawn Avenue") == "7806 LAWN AVE"
     assert housing_court.county_style("1437 W 85Th St") == "1437 W 85TH ST"
+
+
+def test_housing_court_street_parts():
+    import housing_court
+    assert housing_court.street_parts("1437 W 85Th St") == ("1437", "85TH")
+    assert housing_court.street_parts("12109 LENACRAVE AVENUE") == ("12109", "LENACRAVE")
