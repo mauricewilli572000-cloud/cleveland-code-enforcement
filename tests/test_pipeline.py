@@ -343,3 +343,25 @@ def test_field_override(env):
     config.FIELD_OVERRIDES.write_text(json.dumps({"violation_notices": {"address": "Weird_Addr_Col"}}))
     run(env)
     assert leads()["P:12345678"]["property_address"] == "1234 E 105 ST"
+
+
+def test_housing_court_criminal_cases():
+    import housing_court
+    rows = [
+        {"Case Number": "2026-CRB-000316", "Party": "14809 Rochelle Ave", "Extended Connection": "Property Address",
+         "Offenses (Offense Date)": "10/1/3101(e) Maintenance Exterior Property Area (12/26/2025)",
+         "File Date": "2026-01-13 00:00:00", "Current Case Status": "Active",
+         "Last Event Type Description": "Housing Criminal Arraignment"},
+        {"Case Number": "2026-CRB-000316", "Party": "Zada, Ahmad", "Extended Connection": "Defendant",
+         "Offenses (Offense Date)": "10/1/3101(e) Maintenance Exterior Property Area (12/26/2025)",
+         "File Date": "2026-01-13 00:00:00", "Current Case Status": "Active",
+         "Last Event Type Description": "Housing Criminal Arraignment"},
+        {"Case Number": "2026-CRB-000400", "Party": "1 Closed St", "Extended Connection": "Property Address",
+         "File Date": "2026-01-20 00:00:00", "Current Case Status": "Closed"},
+    ]
+    sigs = housing_court.to_signals(rows)
+    assert len(sigs) == 2
+    s = next(x for x in sigs if x["case_number"] == "2026-CRB-000316")
+    assert s["address"].upper().startswith("14809 ROCHELLE") and s["date"] == "2026-01-13" and not s["closed"]
+    assert "Zada, Ahmad" in s["description"] and "(12/26/2025)" not in s["type"]
+    assert next(x for x in sigs if x["case_number"] == "2026-CRB-000400")["closed"]

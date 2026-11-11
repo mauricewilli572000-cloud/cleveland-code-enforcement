@@ -16,6 +16,7 @@ from pathlib import Path
 import config
 import enrich
 import fields
+import housing_court
 import normalize
 import scoring
 import store
@@ -182,6 +183,8 @@ def main(argv=None) -> int:
 
     client = None if args.offline else ArcGISClient()
     raw, failures = {}, []
+    court_keys = [k for k in keys if config.SOURCES[k].get("kind") == "housing_court_xlsx"]
+    keys = [k for k in keys if k not in court_keys]
     for key in keys:
         try:
             raw[key] = (fetch_source_offline(args.offline, key) if args.offline
@@ -189,13 +192,29 @@ def main(argv=None) -> int:
         except Exception as exc:
             log.error("source %s failed: %s", key, exc)
             failures.append(key)
-    if not raw:
+    if not raw and not court_keys:
         log.error("no source could be fetched; run discover_cleveland.py and send back data/debug/")
         return 2
 
     signals, closed_keys, stats = collect_signals(raw, since, args.include_closed, args.include_units, known)
     for k, n in stats.items():
         log.info("%s: %s", k, n)
+
+    # Housing Court criminal cases (Excel report, not ArcGIS). A failure never stops the run.
+    for key in court_keys:
+        try:
+            court_rows = ([] if args.offline and not (args.offline / f"{key}.json").exists()
+                          else fetch_source_offline(args.offline, key) if args.offline
+                          else housing_court.fetch_rows())
+            court = housing_court.to_signals(court_rows)
+            open_court = [s for s in court if not s["closed"] or args.include_closed]
+            signals.extend(open_court)
+            open_keys = {normalize.property_key(s) for s in signals}
+            closed_keys |= {normalize.property_key(s) for s in court if s["closed"]} - open_keys
+            log.info("%s: %d cases, %d open", key, len(court), len(open_court))
+        except Exception as exc:
+            log.error("source %s failed: %s", key, exc)
+            failures.append(key)
 
     lookup = enrich.OwnerLookup()
     if not args.no_enrich:

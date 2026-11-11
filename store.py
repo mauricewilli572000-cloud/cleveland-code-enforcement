@@ -99,6 +99,8 @@ def tags(lead: dict) -> str:
         t.append("condemned")
     if any("Board-Up" in x for x in lead["lead_types"]):
         t.append("boarded")
+    if any("Criminal" in x for x in lead["lead_types"]):
+        t.append("housing-court-criminal")
     return ",".join(t)
 
 

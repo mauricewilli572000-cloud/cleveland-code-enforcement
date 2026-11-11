@@ -25,6 +25,9 @@ FEED_MIN_SCORE = 40
 SERVICE_URL_CACHE = DATA_DIR / "service_urls.json"      # written by discover_cleveland.py
 FIELD_OVERRIDES = DATA_DIR / "field_overrides.json"     # optional manual role -> field name map
 
+HOUSING_COURT_CRIMINAL_URL = ("https://www.clevelandhousingcourt.org/sites/default/files/"
+                              "Criminal%20Cases%20Filed%20Report.xlsx")
+
 ITEM_SHARING_URL = "https://www.arcgis.com/sharing/rest/content/items/{item_id}"
 
 # ---- Lead sources (Cleveland Building & Housing datasets) -------------------
@@ -51,6 +54,13 @@ SOURCES = {
         "layer": 0,
         "all_active": False,
         "base_score": 15,
+    },
+    "housing_criminal": {
+        # Not ArcGIS: the Housing Court's "Criminal Cases Filed" Excel report (see housing_court.py)
+        "label": "Housing Court Criminal Case",
+        "kind": "housing_court_xlsx",
+        "all_active": True,
+        "base_score": 35,
     },
     "board_ups": {
         "label": "Board-Up (open/vacant/vandalized)",
