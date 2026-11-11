@@ -1,6 +1,6 @@
 {
  "meta": {
-  "updated_utc": "2026-11-11T05:32:20+00:00",
+  "updated_utc": "2026-11-11T17:25:20+00:00",
   "lead_count": 6348
  },
  "leads": {
@@ -4384,8 +4384,8 @@
    "owner_name": "MATHIS, AREANNA",
    "owner_is_entity": false,
    "owner_class": "individual",
-   "mailing_address": "12109 GAY AVE, CLEVELAND, OH 44105",
-   "out_of_state_owner": false,
+   "mailing_address": "244 5 TH AVE APT P 58, NEW YORK, NY 10001",
+   "out_of_state_owner": true,
    "lead_types": [
     "Active Condemnation"
    ],
@@ -4402,10 +4402,11 @@
    "ward": "2",
    "neighborhood": "Union-Miles",
    "in_foreclosure": false,
-   "score": 65,
+   "score": 80,
    "score_reasons": [
     "Active Condemnation",
     "open > 180 days (+15)",
+    "owner mails out of state (+15)",
     "individual owner (+10)"
    ],
    "added_date": "2026-10-31",
@@ -5066,10 +5067,10 @@
    "state": "OH",
    "zip": "44110",
    "parcel": "11629062",
-   "owner_name": "WILLIS, JAMES",
+   "owner_name": "JONES, JANAE",
    "owner_is_entity": false,
    "owner_class": "individual",
-   "mailing_address": "258 E 150, CLEVELAND, OH 44110",
+   "mailing_address": "4195 HINSDALE RD, SOUTH EUCLID, OH 44121",
    "out_of_state_owner": false,
    "lead_types": [
     "Board-Up (open/vacant/vandalized)",
@@ -5112,7 +5113,7 @@
    "ward": "10",
    "neighborhood": "Collinwood-Nottingham",
    "in_foreclosure": false,
-   "score": 80,
+   "score": 88,
    "score_reasons": [
     "Board-Up (open/vacant/vandalized)",
     "Civil Ticket (Residents First)",
@@ -5120,6 +5121,7 @@
     "Building Complaint Violation Notice",
     "6 open records (+20)",
     "multiple enforcement types (+10)",
+    "owner mails outside Cleveland (+8)",
     "individual owner (+10)"
    ],
    "added_date": "2026-10-31",
@@ -48377,7 +48379,7 @@
    "owner_name": "C-TOWN VILLAS LLC",
    "owner_is_entity": true,
    "owner_class": "entity",
-   "mailing_address": "20586 LORAIN RD UNIT 7, FAIRVIEW PARK, OH 44126",
+   "mailing_address": "20586 LORAIN RD APT7, FAIRVIEW PARK, OH 44126",
    "out_of_state_owner": false,
    "lead_types": [
     "Active Condemnation"
@@ -55424,10 +55426,10 @@
    "state": "OH",
    "zip": "44110",
    "parcel": "11222027",
-   "owner_name": "KOPORC, SUZANNE M",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "1548 E 34TH ST UPPER, CLEVELAND, OH 44114",
+   "owner_name": "CUYAHOGA TRANSPORT LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "6201 BARBERTON AVE, CLEVELAND, OH 44102",
    "out_of_state_owner": false,
    "lead_types": [
     "Active Condemnation"
@@ -55445,11 +55447,10 @@
    "ward": "10",
    "neighborhood": "North Shore Collinwood",
    "in_foreclosure": false,
-   "score": 60,
+   "score": 50,
    "score_reasons": [
     "Active Condemnation",
-    "open > 90 days (+10)",
-    "individual owner (+10)"
+    "open > 90 days (+10)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-11"
@@ -78162,10 +78163,10 @@
    "state": "OH",
    "zip": "44128",
    "parcel": "14201032",
-   "owner_name": "HARRIS ARCHIE & BETTYE",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "4067 E 142ND ST, CLEVELAND, OH 44128",
+   "owner_name": "FLW ESTATES LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "1532 HANNUM DR, STREETSBORO, OH 44241",
    "out_of_state_owner": false,
    "lead_types": [
     "Active Condemnation"
@@ -78183,10 +78184,10 @@
    "ward": "1",
    "neighborhood": "Union-Miles",
    "in_foreclosure": false,
-   "score": 50,
+   "score": 48,
    "score_reasons": [
     "Active Condemnation",
-    "individual owner (+10)"
+    "owner mails outside Cleveland (+8)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-11"
@@ -91199,10 +91200,10 @@
    "state": "OH",
    "zip": "44119",
    "parcel": "11408032",
-   "owner_name": "KING, CHADWICK",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "6276 OLD REDWOOD HWY, SANTA ROSA, CA 95403",
+   "owner_name": "NIETA CONSULTING LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "8 THE GREEN SUITE 4611, DOVER, DE 19901",
    "out_of_state_owner": true,
    "lead_types": [
     "Civil Ticket (Residents First)"
@@ -91226,11 +91227,10 @@
    "ward": "10",
    "neighborhood": "North Shore Collinwood",
    "in_foreclosure": false,
-   "score": 40,
+   "score": 30,
    "score_reasons": [
     "Civil Ticket (Residents First)",
-    "owner mails out of state (+15)",
-    "individual owner (+10)"
+    "owner mails out of state (+15)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-11"
@@ -94529,11 +94529,11 @@
    "state": "OH",
    "zip": "44120",
    "parcel": "13013110",
-   "owner_name": "ULTIMATE PRODUCTS, LLC.",
+   "owner_name": "PRESTIGE CLEVELAND LLC,",
    "owner_is_entity": true,
    "owner_class": "entity",
-   "mailing_address": "3459 E 140 ST, CLEVELAND, OH 44120",
-   "out_of_state_owner": false,
+   "mailing_address": "688 OSCEAN BLVD, NORTH MIAMI BEACH, FL 33160",
+   "out_of_state_owner": true,
    "lead_types": [
     "Active Condemnation"
    ],
@@ -94550,9 +94550,10 @@
    "ward": "1",
    "neighborhood": "Mount Pleasant",
    "in_foreclosure": false,
-   "score": 40,
+   "score": 55,
    "score_reasons": [
-    "Active Condemnation"
+    "Active Condemnation",
+    "owner mails out of state (+15)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-11"
@@ -143109,10 +143110,10 @@
    "state": "OH",
    "zip": "44120",
    "parcel": "13910034",
-   "owner_name": "DULCE REVOLUTION LLC",
+   "owner_name": "SM&G PURPOSE LLC,",
    "owner_is_entity": true,
    "owner_class": "entity",
-   "mailing_address": "530B HARKLE RD, SANTA FE, NM 87505",
+   "mailing_address": "1815 COUPLES RD, CORONA, CA 92883",
    "out_of_state_owner": true,
    "lead_types": [
     "Civil Ticket (Residents First)"
@@ -261804,7 +261805,7 @@
    "owner_name": "MUBALAMA, JULES MACUMU",
    "owner_is_entity": false,
    "owner_class": "individual",
-   "mailing_address": "12109 LENACRAVE AVE, CLEVELAND, OH 44105",
+   "mailing_address": "10312 NORTH BLVD, CLEVELAND, OH 44108",
    "out_of_state_owner": false,
    "lead_types": [
     "Housing Court Criminal Case"

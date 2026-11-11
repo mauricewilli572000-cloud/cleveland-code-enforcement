@@ -1,6 +1,6 @@
 {
  "meta": {
-  "updated_utc": "2026-11-11T05:32:20+00:00",
+  "updated_utc": "2026-11-11T17:25:20+00:00",
   "lead_count": 6348
  },
  "leads": [
@@ -2648,6 +2648,73 @@
    "last_seen": "2026-11-11"
   },
   {
+   "lead_id": "P:11629062",
+   "property_address": "1437 CLEARAIRE RD",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44110",
+   "parcel": "11629062",
+   "owner_name": "JONES, JANAE",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "4195 HINSDALE RD, SOUTH EUCLID, OH 44121",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Board-Up (open/vacant/vandalized)",
+    "Civil Ticket (Residents First)",
+    "Active Condemnation",
+    "Building Complaint Violation Notice"
+   ],
+   "open_records": 6,
+   "case_numbers": [
+    "B26044540",
+    "CT26011679",
+    "V26044224",
+    "V26044230",
+    "V26045761"
+   ],
+   "cases_by_source": {
+    "board_ups": [
+     "B26044540"
+    ],
+    "civil_tickets": [
+     "CT26011679"
+    ],
+    "condemnations": [],
+    "violation_notices": [
+     "V26044224",
+     "V26044230",
+     "V26045761"
+    ]
+   },
+   "violation_types": [
+    "3101.10(e) Safety and Maintenance Exterior Property Areas",
+    "Condemnation - Garage",
+    "Condemnation - Main Structure",
+    "Failure to Register"
+   ],
+   "description": "PURSUANT TO SECTION 3103.09, 367.04,369.19 AND 369.21 OF THE CODIFIED ORDINANCES OF THE CITY OF CLEVELAND, THE COMMISSIONER OF BUILDING AND HOUSING DOES HEREBY DECLARE THE STRUCTURE KNOWN AS AND LOCATED AT: [ADDRESS] TO BE A PUBLIC NUISANCE IN THAT IT CONSTITUTES AN EMMINENT DANGER AND PERIL TO HUMA",
+   "oldest_open_days": 29,
+   "latest_date": "2026-10-22",
+   "total_fines": 0,
+   "ward": "10",
+   "neighborhood": "Collinwood-Nottingham",
+   "in_foreclosure": false,
+   "score": 88,
+   "score_reasons": [
+    "Board-Up (open/vacant/vandalized)",
+    "Civil Ticket (Residents First)",
+    "Active Condemnation",
+    "Building Complaint Violation Notice",
+    "6 open records (+20)",
+    "multiple enforcement types (+10)",
+    "owner mails outside Cleveland (+8)",
+    "individual owner (+10)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-11"
+  },
+  {
    "lead_id": "P:11023050",
    "property_address": "12414 TUSCORA AVE",
    "city": "CLEVELAND",
@@ -5057,7 +5124,7 @@
    "owner_name": "MUBALAMA, JULES MACUMU",
    "owner_is_entity": false,
    "owner_class": "individual",
-   "mailing_address": "12109 LENACRAVE AVE, CLEVELAND, OH 44105",
+   "mailing_address": "10312 NORTH BLVD, CLEVELAND, OH 44108",
    "out_of_state_owner": false,
    "lead_types": [
     "Housing Court Criminal Case"
@@ -6071,6 +6138,44 @@
    "last_seen": "2026-11-11"
   },
   {
+   "lead_id": "P:13715049",
+   "property_address": "12109 GAY AVE",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44105",
+   "parcel": "13715049",
+   "owner_name": "MATHIS, AREANNA",
+   "owner_is_entity": false,
+   "owner_class": "individual",
+   "mailing_address": "244 5 TH AVE APT P 58, NEW YORK, NY 10001",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 2542,
+   "latest_date": "2019-11-26",
+   "total_fines": 0,
+   "ward": "2",
+   "neighborhood": "Union-Miles",
+   "in_foreclosure": false,
+   "score": 80,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 180 days (+15)",
+    "owner mails out of state (+15)",
+    "individual owner (+10)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-11"
+  },
+  {
    "lead_id": "P:13022051",
    "property_address": "12203 UNION AVE",
    "city": "CLEVELAND",
@@ -6605,72 +6710,6 @@
     "2 open records (+5)",
     "multiple enforcement types (+10)",
     "open > 180 days (+15)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-11"
-  },
-  {
-   "lead_id": "P:11629062",
-   "property_address": "1437 CLEARAIRE RD",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44110",
-   "parcel": "11629062",
-   "owner_name": "WILLIS, JAMES",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "258 E 150, CLEVELAND, OH 44110",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Board-Up (open/vacant/vandalized)",
-    "Civil Ticket (Residents First)",
-    "Active Condemnation",
-    "Building Complaint Violation Notice"
-   ],
-   "open_records": 6,
-   "case_numbers": [
-    "B26044540",
-    "CT26011679",
-    "V26044224",
-    "V26044230",
-    "V26045761"
-   ],
-   "cases_by_source": {
-    "board_ups": [
-     "B26044540"
-    ],
-    "civil_tickets": [
-     "CT26011679"
-    ],
-    "condemnations": [],
-    "violation_notices": [
-     "V26044224",
-     "V26044230",
-     "V26045761"
-    ]
-   },
-   "violation_types": [
-    "3101.10(e) Safety and Maintenance Exterior Property Areas",
-    "Condemnation - Garage",
-    "Condemnation - Main Structure",
-    "Failure to Register"
-   ],
-   "description": "PURSUANT TO SECTION 3103.09, 367.04,369.19 AND 369.21 OF THE CODIFIED ORDINANCES OF THE CITY OF CLEVELAND, THE COMMISSIONER OF BUILDING AND HOUSING DOES HEREBY DECLARE THE STRUCTURE KNOWN AS AND LOCATED AT: [ADDRESS] TO BE A PUBLIC NUISANCE IN THAT IT CONSTITUTES AN EMMINENT DANGER AND PERIL TO HUMA",
-   "oldest_open_days": 29,
-   "latest_date": "2026-10-22",
-   "total_fines": 0,
-   "ward": "10",
-   "neighborhood": "Collinwood-Nottingham",
-   "in_foreclosure": false,
-   "score": 80,
-   "score_reasons": [
-    "Board-Up (open/vacant/vandalized)",
-    "Civil Ticket (Residents First)",
-    "Active Condemnation",
-    "Building Complaint Violation Notice",
-    "6 open records (+20)",
-    "multiple enforcement types (+10)",
     "individual owner (+10)"
    ],
    "added_date": "2026-10-31",
@@ -29432,43 +29471,6 @@
     "individual owner (+10)"
    ],
    "added_date": "2026-11-11",
-   "last_seen": "2026-11-11"
-  },
-  {
-   "lead_id": "P:13715049",
-   "property_address": "12109 GAY AVE",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44105",
-   "parcel": "13715049",
-   "owner_name": "MATHIS, AREANNA",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "12109 GAY AVE, CLEVELAND, OH 44105",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 2542,
-   "latest_date": "2019-11-26",
-   "total_fines": 0,
-   "ward": "2",
-   "neighborhood": "Union-Miles",
-   "in_foreclosure": false,
-   "score": 65,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 180 days (+15)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
    "last_seen": "2026-11-11"
   },
   {
@@ -52590,7 +52592,7 @@
    "owner_name": "C-TOWN VILLAS LLC",
    "owner_is_entity": true,
    "owner_class": "entity",
-   "mailing_address": "20586 LORAIN RD UNIT 7, FAIRVIEW PARK, OH 44126",
+   "mailing_address": "20586 LORAIN RD APT7, FAIRVIEW PARK, OH 44126",
    "out_of_state_owner": false,
    "lead_types": [
     "Active Condemnation"
@@ -59381,43 +59383,6 @@
    "total_fines": 0,
    "ward": "1",
    "neighborhood": "Union-Miles",
-   "in_foreclosure": false,
-   "score": 60,
-   "score_reasons": [
-    "Active Condemnation",
-    "open > 90 days (+10)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-11"
-  },
-  {
-   "lead_id": "P:11222027",
-   "property_address": "466 E 152ND ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44110",
-   "parcel": "11222027",
-   "owner_name": "KOPORC, SUZANNE M",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "1548 E 34TH ST UPPER, CLEVELAND, OH 44114",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 163,
-   "latest_date": "2026-06-01",
-   "total_fines": 0,
-   "ward": "10",
-   "neighborhood": "North Shore Collinwood",
    "in_foreclosure": false,
    "score": 60,
    "score_reasons": [
@@ -76054,6 +76019,42 @@
    "last_seen": "2026-11-11"
   },
   {
+   "lead_id": "P:13013110",
+   "property_address": "3459 E 140 ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44120",
+   "parcel": "13013110",
+   "owner_name": "PRESTIGE CLEVELAND LLC,",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "688 OSCEAN BLVD, NORTH MIAMI BEACH, FL 33160",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 89,
+   "latest_date": "2026-08-14",
+   "total_fines": 0,
+   "ward": "1",
+   "neighborhood": "Mount Pleasant",
+   "in_foreclosure": false,
+   "score": 55,
+   "score_reasons": [
+    "Active Condemnation",
+    "owner mails out of state (+15)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-11"
+  },
+  {
    "lead_id": "P:13210002",
    "property_address": "5514 FLEET AVE",
    "city": "CLEVELAND",
@@ -77758,6 +77759,42 @@
     "Building Complaint Violation Notice",
     "owner mails outside Cleveland (+8)",
     "also in foreclosure (+25)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "P:11222027",
+   "property_address": "466 E 152ND ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44110",
+   "parcel": "11222027",
+   "owner_name": "CUYAHOGA TRANSPORT LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "6201 BARBERTON AVE, CLEVELAND, OH 44102",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 163,
+   "latest_date": "2026-06-01",
+   "total_fines": 0,
+   "ward": "10",
+   "neighborhood": "North Shore Collinwood",
+   "in_foreclosure": false,
+   "score": 50,
+   "score_reasons": [
+    "Active Condemnation",
+    "open > 90 days (+10)"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-11"
@@ -83779,42 +83816,6 @@
    "total_fines": 0,
    "ward": "11",
    "neighborhood": "Old Brooklyn",
-   "in_foreclosure": false,
-   "score": 50,
-   "score_reasons": [
-    "Active Condemnation",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-11"
-  },
-  {
-   "lead_id": "P:14201032",
-   "property_address": "4067 E 142ND ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44128",
-   "parcel": "14201032",
-   "owner_name": "HARRIS ARCHIE & BETTYE",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "4067 E 142ND ST, CLEVELAND, OH 44128",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 76,
-   "latest_date": "2026-08-27",
-   "total_fines": 0,
-   "ward": "1",
-   "neighborhood": "Union-Miles",
    "in_foreclosure": false,
    "score": 50,
    "score_reasons": [
@@ -90279,6 +90280,42 @@
     "open > 180 days (+15)"
    ],
    "added_date": "2026-11-11",
+   "last_seen": "2026-11-11"
+  },
+  {
+   "lead_id": "P:14201032",
+   "property_address": "4067 E 142ND ST",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44128",
+   "parcel": "14201032",
+   "owner_name": "FLW ESTATES LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "1532 HANNUM DR, STREETSBORO, OH 44241",
+   "out_of_state_owner": false,
+   "lead_types": [
+    "Active Condemnation"
+   ],
+   "open_records": 1,
+   "case_numbers": [],
+   "cases_by_source": {
+    "condemnations": []
+   },
+   "violation_types": [],
+   "description": "",
+   "oldest_open_days": 76,
+   "latest_date": "2026-08-27",
+   "total_fines": 0,
+   "ward": "1",
+   "neighborhood": "Union-Miles",
+   "in_foreclosure": false,
+   "score": 48,
+   "score_reasons": [
+    "Active Condemnation",
+    "owner mails outside Cleveland (+8)"
+   ],
+   "added_date": "2026-10-31",
    "last_seen": "2026-11-11"
   },
   {
@@ -101257,49 +101294,6 @@
    "last_seen": "2026-11-11"
   },
   {
-   "lead_id": "P:11408032",
-   "property_address": "18011 WINDWARD RD",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44119",
-   "parcel": "11408032",
-   "owner_name": "KING, CHADWICK",
-   "owner_is_entity": false,
-   "owner_class": "individual",
-   "mailing_address": "6276 OLD REDWOOD HWY, SANTA ROSA, CA 95403",
-   "out_of_state_owner": true,
-   "lead_types": [
-    "Civil Ticket (Residents First)"
-   ],
-   "open_records": 1,
-   "case_numbers": [
-    "CT26010533"
-   ],
-   "cases_by_source": {
-    "civil_tickets": [
-     "CT26010533"
-    ]
-   },
-   "violation_types": [
-    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;"
-   ],
-   "description": "This rental property has not complied with the rental registration ordinance",
-   "oldest_open_days": 35,
-   "latest_date": "2026-10-07",
-   "total_fines": 0,
-   "ward": "10",
-   "neighborhood": "North Shore Collinwood",
-   "in_foreclosure": false,
-   "score": 40,
-   "score_reasons": [
-    "Civil Ticket (Residents First)",
-    "owner mails out of state (+15)",
-    "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-11"
-  },
-  {
    "lead_id": "P:00923094",
    "property_address": "1805 MAYVIEW AVE",
    "city": "CLEVELAND",
@@ -104365,41 +104359,6 @@
     "Civil Ticket (Residents First)",
     "owner mails out of state (+15)",
     "individual owner (+10)"
-   ],
-   "added_date": "2026-10-31",
-   "last_seen": "2026-11-11"
-  },
-  {
-   "lead_id": "P:13013110",
-   "property_address": "3459 E 140 ST",
-   "city": "CLEVELAND",
-   "state": "OH",
-   "zip": "44120",
-   "parcel": "13013110",
-   "owner_name": "ULTIMATE PRODUCTS, LLC.",
-   "owner_is_entity": true,
-   "owner_class": "entity",
-   "mailing_address": "3459 E 140 ST, CLEVELAND, OH 44120",
-   "out_of_state_owner": false,
-   "lead_types": [
-    "Active Condemnation"
-   ],
-   "open_records": 1,
-   "case_numbers": [],
-   "cases_by_source": {
-    "condemnations": []
-   },
-   "violation_types": [],
-   "description": "",
-   "oldest_open_days": 89,
-   "latest_date": "2026-08-14",
-   "total_fines": 0,
-   "ward": "1",
-   "neighborhood": "Mount Pleasant",
-   "in_foreclosure": false,
-   "score": 40,
-   "score_reasons": [
-    "Active Condemnation"
    ],
    "added_date": "2026-10-31",
    "last_seen": "2026-11-11"
@@ -132133,6 +132092,48 @@
    "last_seen": "2026-11-11"
   },
   {
+   "lead_id": "P:11408032",
+   "property_address": "18011 WINDWARD RD",
+   "city": "CLEVELAND",
+   "state": "OH",
+   "zip": "44119",
+   "parcel": "11408032",
+   "owner_name": "NIETA CONSULTING LLC",
+   "owner_is_entity": true,
+   "owner_class": "entity",
+   "mailing_address": "8 THE GREEN SUITE 4611, DOVER, DE 19901",
+   "out_of_state_owner": true,
+   "lead_types": [
+    "Civil Ticket (Residents First)"
+   ],
+   "open_records": 1,
+   "case_numbers": [
+    "CT26010533"
+   ],
+   "cases_by_source": {
+    "civil_tickets": [
+     "CT26010533"
+    ]
+   },
+   "violation_types": [
+    "365.02 Non-Owner-Occupied Residential Rental Unit Registration Required;"
+   ],
+   "description": "This rental property has not complied with the rental registration ordinance",
+   "oldest_open_days": 35,
+   "latest_date": "2026-10-07",
+   "total_fines": 0,
+   "ward": "10",
+   "neighborhood": "North Shore Collinwood",
+   "in_foreclosure": false,
+   "score": 30,
+   "score_reasons": [
+    "Civil Ticket (Residents First)",
+    "owner mails out of state (+15)"
+   ],
+   "added_date": "2026-10-31",
+   "last_seen": "2026-11-11"
+  },
+  {
    "lead_id": "P:00518112",
    "property_address": "2028 W 104TH ST",
    "city": "CLEVELAND",
@@ -154691,10 +154692,10 @@
    "state": "OH",
    "zip": "44120",
    "parcel": "13910034",
-   "owner_name": "DULCE REVOLUTION LLC",
+   "owner_name": "SM&G PURPOSE LLC,",
    "owner_is_entity": true,
    "owner_class": "entity",
-   "mailing_address": "530B HARKLE RD, SANTA FE, NM 87505",
+   "mailing_address": "1815 COUPLES RD, CORONA, CA 92883",
    "out_of_state_owner": true,
    "lead_types": [
     "Civil Ticket (Residents First)"
