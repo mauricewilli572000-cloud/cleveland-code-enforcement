@@ -139,6 +139,13 @@ def to_signal(source_key: str, attrs: dict) -> dict | None:
     except ValueError:
         amount = None
     status = get("status")
+    description = redact(get("description"))[:300]
+    sig_type = re.sub(r"\s+", " ", str(get("type") or "")).strip()[:120]
+    if source_key == "demolitions":
+        done = epoch_ms_to_iso(attrs.get("CLOSED_DATE"))
+        status = f"demolished {done}" if done else "demolition permit issued (building still standing)"
+        sig_type = " ".join(str(attrs.get(k) or "") for k in ("PERMIT_SUBTYPE",)).strip() + " demolition"
+        description = f"Demolition by {attrs.get('Contrator_Business_Name') or 'unknown contractor'}"
     return {
         "source": source_key,
         "label": src["label"],
@@ -148,9 +155,9 @@ def to_signal(source_key: str, attrs: dict) -> dict | None:
         "zip": (str(get("zip") or "").strip()[:5] or addr_zip),
         "date": epoch_ms_to_iso(get("date")),
         "status": str(status or "").strip(),
-        "closed": is_closed(status, src["all_active"]),
-        "type": re.sub(r"\s+", " ", str(get("type") or "")).strip()[:120],
-        "description": redact(get("description"))[:300],
+        "closed": False if source_key == "demolitions" else is_closed(status, src["all_active"]),
+        "type": sig_type,
+        "description": description,
         "amount": amount,
         "ward": str(get("ward") or "").strip(),
         "neighborhood": str(get("neighborhood") or "").strip(),

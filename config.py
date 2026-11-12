@@ -69,6 +69,18 @@ SOURCES = {
         "all_active": False,
         "base_score": 30,
     },
+    "demolitions": {
+        # Demolition permits (City, County Land Bank and private). No status field: a CLOSED_DATE
+        # means the building is down (vacant lot); no CLOSED_DATE means demolition is still pending.
+        # Land-bank/city-owned parcels are dropped like every other government-owned property.
+        "label": "Demolition Permit",
+        "item_id": "53a4e551102a42c1b4af8a17f863f509",
+        "layer": 0,
+        "all_active": False,
+        "base_score": 25,
+        "lookback_days": 365,   # pull and keep a full year of permits
+        "recheck": False,       # nothing to re-check: permits never "close" as a case
+    },
 }
 
 # ---- Owner enrichment sources -----------------------------------------------

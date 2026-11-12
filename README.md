@@ -15,6 +15,7 @@ public REST API.
 |---|---|---|
 | `condemnations` | Active Condemnations | Strongest signal; dataset holds only active records |
 | `board_ups` | Board-up permits (open/vacant/vandalized) | Vacant, vandalized structures |
+| `demolitions` | Demolition permits, last 12 months (City, Land Bank, private) | Building pending demolition, or now a vacant lot |
 | `violation_notices` | Building Complaint Violation Notices (2015+) | Complaints escalated to a notice |
 | `civil_tickets` | Civil Tickets, Residents First (2025+) | Fines accruing on the owner |
 
@@ -67,7 +68,7 @@ Foreclosure CSV columns: `parcel` and/or `property_address` (header names are ca
 
 ## Score (0-100)
 
-Highest base among signals (condemnation 40, board-up 30, violation notice 20, civil ticket 15), plus: 5 per extra open record (max 20), +10 multiple enforcement types, +10/+15 open over 90/180 days, +10 fines owed, +15 owner mails out of state (+8 outside Cleveland), +25 also in foreclosure. Hover a dashboard row for the breakdown.
+Highest base among signals (condemnation 40, board-up 30, demolition permit 25, violation notice 20, civil ticket 15), plus: 5 per extra open record (max 20), +10 multiple enforcement types, +10/+15 open over 90/180 days, +10 fines owed, +15 owner mails out of state (+8 outside Cleveland), +25 also in foreclosure. Hover a dashboard row for the breakdown.
 
 ## Outputs
 

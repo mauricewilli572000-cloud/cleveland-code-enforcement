@@ -27,6 +27,7 @@ log = logging.getLogger("pipeline")
 
 def fetch_source_live(client: ArcGISClient, key: str, since: date, known_cases: set[str]) -> list[dict]:
     src = config.SOURCES[key]
+    since = source_since(key, since)
     url = client.resolve_layer_url(src["item_id"], src["layer"])
     names = [f["name"] for f in client.layer_info(url).get("fields", [])]
     date_field = fields.detect_field(names, "date", key)
@@ -42,7 +43,7 @@ def fetch_source_live(client: ArcGISClient, key: str, since: date, known_cases: 
         rows = client.query(url, "1=1")
     # Re-check cases we already store (opened before the window) so closures are noticed.
     case_field = fields.detect_field(names, "case_number", key)
-    if known_cases and case_field and not src["all_active"]:
+    if known_cases and case_field and not src["all_active"] and src.get("recheck", True):
         cases = sorted(known_cases)
         for i in range(0, len(cases), 100):
             inlist = ",".join("'" + c.replace("'", "''") + "'" for c in cases[i:i + 100])
@@ -53,6 +54,12 @@ def fetch_source_live(client: ArcGISClient, key: str, since: date, known_cases: 
                 break
     log.info("%s: %d raw rows (%s; %d stored cases re-checked)", key, len(rows), where, len(known_cases))
     return rows
+
+
+def source_since(key: str, since: date) -> date:
+    """A source may look back further than the run's window (e.g. a year of demolition permits)."""
+    days = config.SOURCES[key].get("lookback_days")
+    return min(since, date.today() - timedelta(days=days)) if days else since
 
 
 def fetch_source_offline(fixture_dir: Path, key: str) -> list[dict]:
@@ -80,9 +87,13 @@ def collect_signals(raw_by_source: dict, since: date, include_closed: bool, incl
                 n["closed"] += 1
                 closed_keys_all.add(normalize.property_key(sig))
                 continue
-            in_window = (not sig["date"] or config.SOURCES[key]["all_active"]
-                         or sig["date"] >= since.isoformat()
-                         or sig["case_number"] in known.get(key, ()))
+            src_cfg = config.SOURCES[key]
+            if src_cfg.get("lookback_days"):     # fixed window: kept for lookback_days, then ages out
+                in_window = bool(sig["date"]) and sig["date"] >= source_since(key, since).isoformat()
+            else:
+                in_window = (not sig["date"] or src_cfg["all_active"]
+                             or sig["date"] >= since.isoformat()
+                             or sig["case_number"] in known.get(key, ()))
             if not in_window:
                 n["old"] += 1
                 continue
